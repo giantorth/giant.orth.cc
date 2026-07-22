@@ -1,0 +1,3 @@
+## Node / Eleventy site build
+node_modules/
+_site/
