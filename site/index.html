@@ -97,9 +97,9 @@
         <div class="shotwrap">
           <div class="shot floatshot">
             <div class="bar"><i></i><i></i><i></i><span class="ttl">SimHub › Plugins › AZOM</span></div>
-            <img src="docs/images/BasePage.png" alt="The AZOM plugin panel inside SimHub, showing steering angle, temperatures, FFB settings, equalizer and output curve" loading="lazy" />
+            <img src="docs/images/BasePage.png" alt="The AZOM plugin panel inside SimHub, showing steering angle, temperatures, bandwidth and FFB settings" loading="lazy" />
           </div>
-          <p class="cap"><b>The plugin panel</b> — wheelbase, FFB, EQ and output curves, mirroring Pithouse.</p>
+          <p class="cap"><b>The plugin panel</b> — wheelbase health, FFB, effects and per-game profiles, mirroring Pithouse.</p>
         </div>
       </div>
     </div>
@@ -142,7 +142,7 @@
       <div class="card reveal">
         <div class="idx">06</div>
         <h3>mBooster Pedal Haptics</h3>
-        <p>Host-rendered pedal effects from live telemetry — ABS pulse, tyre lockup, brake-threshold feedback and RPM-driven continuous vibration, per assigned pedal.</p>
+        <p>Pedal feel in real units — travel in mm, force in kg — plus telemetry effects: ABS, traction control, wheel spin, gear shift, lockup, road texture and custom formula effects.</p>
       </div>
       <div class="card reveal">
         <div class="idx">07</div>
@@ -153,6 +153,26 @@
         <div class="idx">08</div>
         <h3>Full SDK Support</h3>
         <p>Full SDK integration required for <b>iRacing</b> and 360Hz and Low Frequency Effects.</p>
+      </div>
+      <div class="card reveal">
+        <div class="idx">09</div>
+        <h3>Wheelbase LFE Haptics</h3>
+        <p>Host-rendered low-frequency effects streamed to the base at 50&nbsp;Hz — engine, ABS and gearshift channels with live formula control and shareable presets. Firmware 1.2.10.10+.</p>
+      </div>
+      <div class="card reveal">
+        <div class="idx">10</div>
+        <h3>Multi-Function Stalks</h3>
+        <p>Button box or truck-sim mode — wipers, lights and indicators translated to ETS2/ATS keyboard controls with true stage tracking and one-click re-sync.</p>
+      </div>
+      <div class="card reveal">
+        <div class="idx">11</div>
+        <h3>HGP &amp; SGP Shifters</h3>
+        <p>Independent tabs for the H-pattern and sequential shifters, each with its own detection and per-profile settings — run both on one rig at the same time.</p>
+      </div>
+      <div class="card reveal">
+        <div class="idx">12</div>
+        <h3>Racing Dashes</h3>
+        <p>CM1 and CM2 dashes with full default channel maps — per-corner tyre data, timing, fuel and flags — every field ships a working SimHub binding out of the box.</p>
       </div>
     </div>
 
@@ -169,6 +189,9 @@
         <span class="chip"><span class="ok">✓</span>FSR1</span>
         <span class="chip"><span class="ok">✓</span>FSR2</span>
         <span class="chip"><span class="ok">✓</span>AB9 active shifter</span>
+        <span class="chip"><span class="ok">✓</span>HGP shifter</span>
+        <span class="chip"><span class="ok">✓</span>SGP shifter</span>
+        <span class="chip"><span class="ok">✓</span>Multi-function stalks</span>
         <span class="chip"><span class="ok">✓</span>mBooster pedals</span>
         <span class="chip"><span class="ok">✓</span>Handbrake</span>
         <span class="chip"><span class="ok">✓</span>CM1</span>
@@ -215,6 +238,20 @@
           <img src="docs/images/ControlsandEvents.png" alt="Wheel buttons mapped to AZOM actions in SimHub's Controls and events" loading="lazy" />
         </div>
         <p class="cap"><b>Cockpit control</b> — map wheel buttons to 40+ AZOM actions like FFB strength and brightness.</p>
+      </div>
+      <div class="reveal">
+        <div class="shot">
+          <div class="bar"><i></i><i></i><i></i><span class="ttl">AZOM › LFE Effects</span></div>
+          <img src="docs/images/LfeEffects.png" alt="The AZOM LFE Effects tab with engine presets and three formula-driven effect slots" loading="lazy" />
+        </div>
+        <p class="cap"><b>Base haptics</b> — three LFE slots with live formulas and shareable engine presets.</p>
+      </div>
+      <div class="reveal">
+        <div class="shot">
+          <div class="bar"><i></i><i></i><i></i><span class="ttl">AZOM › mBooster</span></div>
+          <img src="docs/images/MBooster.png" alt="The AZOM mBooster tab with pedal feel and sim input mapping curve editors" loading="lazy" />
+        </div>
+        <p class="cap"><b>Pedal feel</b> — travel, stiffness and force in real units, with sim input mapping.</p>
       </div>
     </div>
   </div>

@@ -3,7 +3,7 @@ layout: guide.njk
 title: Wheel LEDs & Knobs
 description: Drive your wheel's RPM lights and knob rings through SimHub, and set their onboard idle effects.
 tags: guide
-order: 7
+order: 11
 ---
 
 Once your wheel is added as a device, its LEDs become part of SimHub's full effects
@@ -15,7 +15,10 @@ the **MOZA Wheel** tabs (onboard behaviour).
 
 Open your wheel under **Devices** and switch to **LEDs**. Each LED group on the wheel —
 **Buttons lighting**, **Telemetry LEDs**, **Knob Indicators**, **Individual LEDs** — gets
-its own effects profile that you can edit, import, or manage.
+its own effects profile that you can edit, import, or manage. The master brightness slider
+at the top scales everything, the **Brightness limiter and balance** row caps each group
+separately, and the **Connection status** line at the bottom confirms SimHub is actually
+talking to the wheel.
 
 ![The Devices LEDs tab showing effects profiles for each LED group on the wheel](/docs/images/WheelLEDs.png)
 
@@ -43,7 +46,9 @@ telemetry isn't sending.
 ## Knobs — rings &amp; signal mode
 
 The **Knobs** tab configures the rotary LED rings. **Knob LED Mode** and **Knob Idle
-Effect** mirror the RPM controls, but the interesting part is per-knob colour.
+Effect** mirror the RPM controls, and **Telemetry Color Restore** puts each knob's static
+colour back once a telemetry effect lets go of it. The interesting part, though, is
+per-knob colour.
 
 ![The Knobs configuration tab showing per-knob colour rings and signal mode](/docs/images/WheelKnobs.png)
 

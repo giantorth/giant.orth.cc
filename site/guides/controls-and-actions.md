@@ -3,7 +3,7 @@ layout: guide.njk
 title: Controls & Actions
 description: Bind wheel buttons to AZOM actions — FFB strength, rotation, brightness, dashboard switching and more.
 tags: guide
-order: 10
+order: 14
 ---
 
 AZOM exposes 40+ bindable actions — FFB strength up/down, rotation, display brightness,
@@ -64,7 +64,8 @@ So `AZOM.FfbStrengthUp` raises FFB by 5 %, and `AZOM.FfbStrengthDownCoarse` drop
 | `AZOM.Ab9EngineFrequency` | ±10 | ±20 | 0–200 Hz | AB9 shifter engine-vibration frequency |
 | `AZOM.Ab9GearShiftIntensity` | ±5 | ±10 | 0–100 | AB9 shifter gear-shift vibration |
 
-> **AB9 actions** only take effect when an AB9 active-shifter profile is loaded.
+> **AB9 actions** only take effect when an AB9 active-shifter profile is loaded — see the
+> [AB9 Active Shifter](/guides/ab9-shifter/) guide for what they control.
 
 ### Jump to a display brightness
 

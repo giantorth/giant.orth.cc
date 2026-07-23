@@ -3,18 +3,21 @@ layout: guide.njk
 title: Pedals & Handbrake
 description: Set range, direction and output curves for your pedals and handbrake, and calibrate them in seconds.
 tags: guide
-order: 5
+order: 6
 ---
 
 If you run MOZA pedals or a handbrake, AZOM gives each axis the same treatment as the
 wheelbase: a live input read-out, direction and range, a calibration routine, and a
 draggable output curve. The tabs only appear for hardware that's actually connected.
 
+> **mBooster owners:** active-pedal feel and haptic effects have their own tab — see
+> [mBooster Pedal Feel &amp; Effects](/guides/mbooster/).
+
 ## Pedals
 
 The **Pedals** tab splits into **Throttle**, **Brake** and **Clutch**, each configured
-independently. The bars across the top show live input so you can confirm the axis is
-moving before you touch anything.
+independently. The graph across the top traces all three axes live so you can confirm the
+axis is moving before you touch anything.
 
 ![The AZOM Pedals tab showing throttle direction, range and output curve](/docs/images/Pedals.png)
 

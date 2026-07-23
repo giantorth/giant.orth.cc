@@ -3,7 +3,7 @@ layout: guide.njk
 title: Advanced LEDs with ATSR
 description: Build telemetry-driven LED effects in the ATSR-EVO plugin from a ready-made MOZA profile, then import them into your wheel's Individual LEDs.
 tags: guide
-order: 8
+order: 12
 ---
 
 AZOM exposes your wheel's LEDs to SimHub's full effects pipeline, but the richest,
@@ -20,10 +20,15 @@ ready-made ATSR profiles are available for each MOZA wheel.
 
 ## 1 · Add a generic wheel in ATSR
 
-Open **ATSR-Hub EVO** in SimHub's left navigation and go to the **Device Trait** tab. Under
-**All Series + Profiles**, click **Universal Wheel Profile** to start a new generic wheel.
+Open **ATSR-Hub EVO** in SimHub's left navigation and go to the **Device Hub** tab. Under
+**All Devices / Profiles**, click the **Universal Wheel Profile** tile to start a new
+generic wheel (the **Add new device** button under the device list gets you to the same
+place).
 
-![The ATSR-Hub EVO Device Trait tab with the Universal Wheel Profile selected](/docs/ATSR/Setup1.png)
+![The ATSR-Hub EVO Device Hub tab with the Universal Wheel Profile tile selected](/docs/ATSR/DeviceHub.png)
+
+<!-- Setup2–5.png below were captured on a pre-2.2.2 ATSR-EVO build; the wizard flow
+     should be re-verified and the shots retaken against the current release. -->
 
 ## 2 · Import the MOZA profile
 

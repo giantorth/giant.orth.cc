@@ -3,7 +3,7 @@ layout: guide.njk
 title: Control Mapper
 description: Make several wheels or button boxes act as one virtual controller so your AZOM mappings survive a wheel swap.
 tags: guide
-order: 11
+order: 15
 ---
 
 [Controls &amp; Actions](/guides/controls-and-actions/) maps each wheel's buttons
@@ -26,8 +26,8 @@ Control mapper is an optional SimHub feature. Turn it on from **Add/remove featu
 >For this feature to work, you MUST enable **Recognize Simcube 2 wireless wheels and Fanatec Wheels as individual controllers**
 
 Once enabled, the **Control mapper** page is where you set the output mode and confirm your
-source controllers are recognised — for example a *MOZA R5 Base - CS Pro* showing as
-**Connected**.
+source controllers are recognised — for example a *Gudsen MOZA R5 Base - CS Pro* showing as
+**Connected** while the *KS* it replaced sits **Unplugged**.
 
 ![The Control mapper page showing the target virtual controller and connected source controller](/docs/images/ControlMapperOption.png)
 

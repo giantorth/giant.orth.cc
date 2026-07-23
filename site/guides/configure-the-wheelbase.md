@@ -10,14 +10,16 @@ The **Base** tab is mission control for your wheelbase. Everything Pithouse expo
 force feedback lives here, plus a few extras, and every value is stored per game through
 SimHub's profile system. Here's what each section does.
 
-![The AZOM Base tab inside SimHub showing steering angle, performance output, core settings and the FFB curves](/docs/images/BasePage.png)
+![The AZOM Base tab inside SimHub showing steering angle, temperatures, core settings and effects](/docs/images/BasePage.png)
 
 ## Status strip
 
 The top strip is live stats of your wheelbase. The dial shows real-time **steering
 angle**; **Calibrate Center** re-zeros it if your wheel drifts off centre. The two graphs
-track base health — **MCU / MOSFET / motor** temperatures and serial **inbound /
-outbound** throughput — so you can spot a hot or saturated base at a glance.
+track base health — **MCU / MOSFET / motor** temperatures (in whichever unit SimHub is set
+to) and serial **inbound / outbound** throughput against the link's **capacity** — so you
+can spot a hot or saturated base at a glance. The temperature history runs for the whole
+SimHub session, not just while the panel is open.
 
 > **Performance Output — Reserved vs Full.** *Full* unlocks the base's complete torque
 > range; *Reserved* holds some in reserve for longevity and a cooler motor.
@@ -31,12 +33,19 @@ outbound** throughput — so you can spot a hot or saturated base at a glance.
 - **Base Torque Output** — hard ceiling on torque the base will ever deliver.
 - **Maximum Wheel Speed** — caps how fast the wheel can spin itself, a safety and feel
   control.
+- **Interpolation** — smooths the incoming FFB signal; 0 is raw, higher values trade a
+  little latency for less grain.
+- **Restart Wheelbase** — reboots the base without touching your USB cables; force
+  feedback drops briefly while it comes back.
 
 ## Gearshift vibration
 
 A bump pulsed through the wheel on every shift. **Shift Intensity** sets how hard,
 **Shift Debounce** stops a fast shift from double-firing, and **Vibrate on Neutral**
 toggles the effect when you land in neutral.
+
+> **Want more base haptics?** Engine rumble, ABS pulses and formula-driven vibration
+> through the wheelbase live on the [LFE Effects](/guides/lfe-effects/) tab.
 
 ## Wheelbase effects vs game effects
 

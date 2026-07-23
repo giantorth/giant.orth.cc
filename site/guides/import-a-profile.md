@@ -3,7 +3,7 @@ layout: guide.njk
 title: Import a Profile
 description: Load a MOZA Pit House preset into AZOM and review exactly what changes before you apply it.
 tags: guide
-order: 6
+order: 10
 ---
 
 You don't have to build your force-feedback settings from scratch. AZOM can read MOZA Pit
@@ -25,7 +25,8 @@ Use **Set folder…** if yours are somewhere else.
 ## 2 · Pick a preset
 
 Presets are grouped by type — **Wheel base (Motor)**, **Pedals**, or **Browse for file…**
-for one sitting elsewhere. Select the preset you want and click **Next**.
+for one sitting elsewhere. Both the classic Pit House presets and the newer `.mzpreset`
+format are understood. Select the preset you want and click **Next**.
 
 ![The AZOM Import tab listing wheel base presets from the Pit House folder](/docs/images/ImportProfile1.png)
 
@@ -47,7 +48,8 @@ separately at the bottom as **not imported**, so there are no silent surprises.
 
 Happy with the diff? Click **Apply** and the values land in your active profile. Because
 profiles are per game, the import only affects the game you're currently set to — switch
-games and your other setups are untouched.
+games and your other setups are untouched. [LFE Effects](/guides/lfe-effects/) settings
+ride along with the profile too.
 
 > **Back out any time.** Importing only writes the values shown in the diff. If you don't
 > like the result, import a different preset or adjust by hand on the

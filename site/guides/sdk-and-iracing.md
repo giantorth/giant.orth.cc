@@ -3,7 +3,7 @@ layout: guide.njk
 title: SDK & iRacing
 description: Enable the MOZA SDK server for iRacing and 360 Hz mode, plus update channels and diagnostics.
 tags: guide
-order: 12
+order: 16
 ---
 
 Some titles — **iRacing** in particular — and any game running MOZA's **360 Hz** mode need
@@ -34,6 +34,12 @@ you need it.
 
 ### Status
 
-The **Status** block confirms the listeners are up — you'll see the CoAP and UDP listeners
-reporting that they're bound on `127.0.0.1`. If iRacing's force feedback isn't behaving,
-this is the first thing to check.
+The **Status** block confirms the listeners are up — you'll see the CoAP listener on
+`127.0.0.1:40266` and the UDP listener on `127.0.0.1:40288`. If iRacing's force feedback
+isn't behaving, this is the first thing to check.
+
+### Recent requests
+
+The **Recent Requests** panel shows the last 20 requests per server, live. If a game is
+supposed to be using the SDK but the panel stays empty, the traffic isn't arriving — a
+quick way to tell "SDK not talking" apart from "SDK talking, settings wrong".
