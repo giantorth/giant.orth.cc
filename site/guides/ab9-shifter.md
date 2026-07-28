@@ -3,7 +3,7 @@ layout: guide.njk
 title: AB9 Active Shifter
 description: Pick a shift pattern, tune the mechanical feel, and dial in engine and gear-shift vibration for MOZA's force-feedback shifter.
 tags: guide
-order: 8
+order: 9
 ---
 
 The AB9 is a motorised shifter — its gates, resistance and vibration are all

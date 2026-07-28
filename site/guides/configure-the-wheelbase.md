@@ -3,7 +3,7 @@ layout: guide.njk
 title: Configure the Wheelbase
 description: A tour of the Base tab — rotation, FFB strength, damping, the equalizer and the output curve.
 tags: guide
-order: 4
+order: 5
 ---
 
 The **Base** tab is mission control for your wheelbase. Everything Pithouse exposes for

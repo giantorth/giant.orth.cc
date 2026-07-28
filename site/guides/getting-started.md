@@ -19,7 +19,7 @@ walkthrough if you want it.
 
 - **SimHub 9.11.8** or newer
 - A MOZA wheelbase connected over USB
-- Windows, or Linux running SimHub via Proton/Wine
+- Windows, or Linux running SimHub via Proton/Wine — see [Linux Setup](/guides/linux-setup/)
 
 ## The short path
 

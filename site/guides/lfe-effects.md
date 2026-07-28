@@ -3,7 +3,7 @@ layout: guide.njk
 title: LFE Effects
 description: Host-rendered low-frequency haptics for your wheelbase — engine rumble, ABS pulses and gearshift thumps, tunable with live SimHub formulas.
 tags: guide
-order: 5
+order: 6
 ---
 
 The **LFE Effects** tab turns your wheelbase into a bass shaker. AZOM renders three

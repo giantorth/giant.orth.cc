@@ -3,7 +3,7 @@ layout: guide.njk
 title: Plugin Options
 description: Plugin-wide switches — profiles on launch, language, bug reports and diagnostics, LED output pacing, USB detection and device definitions.
 tags: guide
-order: 17
+order: 18
 ---
 
 Unlike the hardware tabs, most of what lives on the **Options** tab is plugin-wide rather

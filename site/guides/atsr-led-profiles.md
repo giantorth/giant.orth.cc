@@ -3,7 +3,7 @@ layout: guide.njk
 title: Advanced LEDs with ATSR
 description: Build telemetry-driven LED effects in the ATSR-EVO plugin from a ready-made MOZA profile, then import them into your wheel's Individual LEDs.
 tags: guide
-order: 12
+order: 13
 ---
 
 AZOM exposes your wheel's LEDs to SimHub's full effects pipeline, but the richest,
