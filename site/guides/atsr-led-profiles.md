@@ -84,5 +84,4 @@ Under **Individual leds**, click **Import profile** and select the file you just
 
 ![The MOZA wheel LEDs tab with the imported ATSR profile under Individual leds](/docs/ATSR/Setup5.png)
 
-That's it — ATSR now drives your wheel's individual LEDs through AZOM. Tweak the effects any
-time in ATSR, re-export, and re-import to update.
+That's it — ATSR now drives your wheel's individual LEDs through AZOM. Configure the effects any time in ATSR plugin.
