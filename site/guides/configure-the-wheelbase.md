@@ -73,3 +73,10 @@ The two graphs at the bottom are the fine-tuning tools:
 
 > **Tip:** Rather than build this by hand, import a community preset as a baseline and
 > tweak from there — see [Import a Profile](/guides/import-a-profile/).
+
+## Adjust any of it from a wheel button
+
+Every setting on this tab has a matching bindable action, so you can nudge rotation, FFB
+strength, spring, damping — even individual equalizer bands — without alt-tabbing out of
+the sim. Each one is also readable as a property for your dashboard. See
+[Controls &amp; Actions](/guides/controls-and-actions/).
