@@ -64,10 +64,29 @@ Below the curves, each effect card vibrates the pedal motor from live telemetry,
   consistent braking point.
 - **Engine Vibration** — continuous rumble whose frequency tracks RPM toward redline;
   you set only the Intensity.
+- **Bite Point** — clutch only. Pulses as the clutch *releases* back past a **Trigger Input
+  Level**, so you feel the engagement point instead of hunting for it. It latches on the
+  release edge, not the press, which is why it doesn't fire on the way down.
 
 > **One channel for engine-style effects.** Traction Control, Wheel Spin, Gear Shift and
 > any custom effect share Engine Vibration's wire channel, so only one of them drives the
 > motor at a time — the most recently active effect wins.
+
+## G-Force — inertial pedal feel (experimental)
+
+**G-Force** doesn't vibrate: it *moves* the pedal under your foot in proportion to live
+longitudinal G, pushing forward as you accelerate and back as you brake. **Max Pedal
+Travel (mm)** sets how far it moves at full G, and **Response Speed** sets how quickly it
+ramps to the new position. It has the same **Test** toggle as the vibration effects.
+
+## Segmented damping (experimental)
+
+**Segmented Damping** adds a damping force that is independent of anything the game sends.
+Pedal travel is divided into segments, each with its own range and its own damping amount,
+and separate curves for **When Pressed** and **When Released** — so the pedal can feel
+heavy coming down and light coming back, or the reverse.
+
+Drag a divider to resize a segment; drag inside a segment to set its damping.
 
 ## Custom effects (experimental)
 

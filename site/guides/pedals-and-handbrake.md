@@ -27,6 +27,9 @@ axis is moving before you touch anything.
 - **Range Start / Range End** — trim the usable travel. Set **Start** above 0% to add a
   deadzone off rest; pull **End** below 100% so you reach full input before the pedal
   bottoms out.
+- **Sensor Ratio** — brake only, on pedals that have both sensors: blends the angle sensor
+  and the load cell. 0 is pure angle (travel), 100 is pure load cell (pressure). Load-cell
+  braking is the usual race setup.
 
 ### Calibration
 
@@ -51,8 +54,8 @@ The **Handbrake** tab works the same way, with one extra choice.
 ![The AZOM Handbrake tab showing mode, range, calibration and output curve](/docs/images/Handbrake.png)
 
 - **Mode — Axis or Button.** *Axis* reports progressive pull (for rally and drift, where
-  partial lock matters). *Button* fires a simple on/off at a threshold, which some titles
-  prefer.
+  partial lock matters). *Button* fires a simple on/off, which some titles prefer — the
+  **Button Threshold** slider sets how far you have to pull before it triggers.
 - **Reverse Direction**, **Range Start / End**, **Calibration** and the **Output Curve**
   behave exactly as they do for the pedals.
 

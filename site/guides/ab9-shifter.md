@@ -3,7 +3,7 @@ layout: guide.njk
 title: AB9 Active Shifter
 description: Pick a shift pattern, tune the mechanical feel, and dial in engine and gear-shift vibration for MOZA's force-feedback shifter.
 tags: guide
-order: 9
+order: 10
 ---
 
 The AB9 is a motorised shifter — its gates, resistance and vibration are all
@@ -50,6 +50,5 @@ stops a quick double-shift from firing twice.
 > are all bindable actions (`AZOM.Ab9EngineIntensityUp`, `AZOM.Ab9EngineFrequencyDown`
 > and friends) — see [Controls &amp; Actions](/guides/controls-and-actions/).
 
-> **Detection misbehaving?** The plugin probes for an AB9 on reconnect. If that probe
-> upsets another device on your rig, it can be switched off under
-> [Plugin Options](/guides/options/) › USB detection.
+> **Passive shifters** — the HGP and SGP have no motors and are configured on their own
+> tabs; see [HGP &amp; SGP Shifters](/guides/hgp-sgp-shifters/).

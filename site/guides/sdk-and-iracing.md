@@ -1,19 +1,18 @@
 ---
 layout: guide.njk
 title: SDK & iRacing
-description: Enable the MOZA SDK server for iRacing and 360 Hz mode, plus update channels and diagnostics.
+description: Enable the MOZA SDK server for iRacing and 360 Hz mode from the plugin's Options tab.
 tags: guide
-order: 17
+order: 21
 ---
 
 Some titles — **iRacing** in particular — and any game running MOZA's **360 Hz** mode need
-the official MOZA SDK. AZOM ships an embedded SDK server to provide all of the same functions you had before. You'll set this up once.
+the official MOZA SDK. AZOM ships an embedded SDK server that provides all of the same
+functions you had before. You'll set this up once.
 
-## The SDK tab
+## Where it lives
 
-Open the **SDK** tab in the AZOM panel.
-
-![The AZOM SDK tab showing the CoAP server and UDP control settings](/docs/images/SDK.png)
+Open the **Options** tab in the AZOM panel and find the **SDK** card.
 
 ### CoAP SDK server
 
@@ -28,18 +27,20 @@ provides official MOZA SDK support for games that require it.
 
 ### UDP control
 
-The **UDP control server** is a legacy plain-CBOR-over-UDP surface for setting steering
+**Enable UDP control server** is a legacy plain-CBOR-over-UDP surface for setting steering
 angle. The one known use is the **RSF** build of *Richard Burns Rally*; leave it off unless
 you need it.
 
 ### Status
 
-The **Status** block confirms the listeners are up — you'll see the CoAP listener on
-`127.0.0.1:40266` and the UDP listener on `127.0.0.1:40288`. If iRacing's force feedback
-isn't behaving, this is the first thing to check.
+A status line sits under each toggle:
 
-### Recent requests
+- The CoAP line reports port **40266** and the state of its stub-manager process.
+- The UDP line reports port **40288**.
 
-The **Recent Requests** panel shows the last 20 requests per server, live. If a game is
-supposed to be using the SDK but the panel stays empty, the traffic isn't arriving — a
-quick way to tell "SDK not talking" apart from "SDK talking, settings wrong".
+The two report independently, so a port collision or a stub that couldn't extract shows up
+against the piece that actually broke. If iRacing's force feedback isn't behaving, this is
+the first thing to check.
+
+> **Everything else on this tab** — language, updates, device definitions and the rest —
+> is covered in [Plugin Options](/guides/options/).

@@ -78,7 +78,7 @@
         <div class="metrics reveal">
           <span class="metric"><b>GPL-3.0</b></span>
           <span class="metric">Windows &amp; Linux</span>
-          <span class="metric">11 languages</span>
+          <span class="metric">12 languages</span>
           <span class="metric">SimHub 9.11.8+</span>
         </div>
         <div class="why-merge reveal" id="why">
@@ -147,7 +147,7 @@
       <div class="card reveal">
         <div class="idx">07</div>
         <h3>Wheelbase Ambient LEDs</h3>
-        <p>R21 / R25 bases expose their 18-LED ambient lights as a dedicated SimHub device — standby animations, sleep mode, brightness and startup colors.</p>
+        <p>R16 / R21 / R25 / R27 bases expose their ambient light ring as a dedicated SimHub device at its real LED count — 12 on an R16, 18 on the rest — with standby animations, sleep mode, brightness and startup colors.</p>
       </div>
       <div class="card reveal">
         <div class="idx">08</div>
@@ -173,6 +173,26 @@
         <div class="idx">12</div>
         <h3>Racing Dashes</h3>
         <p>CM1 and CM2 dashes with full default channel maps — per-corner tyre data, timing, fuel and flags — every field ships a working SimHub binding out of the box.</p>
+      </div>
+      <div class="card reveal">
+        <div class="idx">13</div>
+        <h3>S12 Pedal Haptics</h3>
+        <p>MOZA's pedal vibration units register as one ShakeIt Motors device per pedal — build effects in SimHub's own editor and the plugin allocates them across the hardware's oscillators. SimHub 9.12+.</p>
+      </div>
+      <div class="card reveal">
+        <div class="idx">14</div>
+        <h3>Dashboard Upload &amp; Studio</h3>
+        <p>Manage the layouts stored on your wheel, upload new <code class="path">.mzdash</code> files, launch MOZA Dashboard Studio sized for the connected display — or convert a SimHub dashboard, with a full report of what carried across.</p>
+      </div>
+      <div class="card reveal">
+        <div class="idx">15</div>
+        <h3>Pit House Preset Import</h3>
+        <p>Read MOZA Pit House presets — classic and <code class="path">.mzpreset</code> — straight into a profile, with a diff of every value that will change before you apply it.</p>
+      </div>
+      <div class="card reveal">
+        <div class="idx">16</div>
+        <h3>One-Click Bug Reports</h3>
+        <p>The Help tab uploads a diagnostic bundle — logs, serial captures, settings and the full diagnostic report — with serial numbers and MCU UIDs masked. Or export the ZIP and attach it yourself.</p>
       </div>
     </div>
 
@@ -237,7 +257,7 @@
           <div class="bar"><i></i><i></i><i></i><span class="ttl">Controls &amp; events</span></div>
           <img src="docs/images/ControlsandEvents.png" alt="Wheel buttons mapped to AZOM actions in SimHub's Controls and events" loading="lazy" />
         </div>
-        <p class="cap"><b>Cockpit control</b> — map wheel buttons to 40+ AZOM actions like FFB strength and brightness.</p>
+        <p class="cap"><b>Cockpit control</b> — map wheel buttons to 200+ AZOM actions like FFB strength and brightness.</p>
       </div>
       <div class="reveal">
         <div class="shot">
@@ -283,7 +303,7 @@
       </div>
       <div class="admon">
         <div class="lbl" style="color:var(--sub)"><span class="leds"><i class="g"></i></span> Development builds</div>
-        <p class="dev">The latest in-progress build is published as a pre-release: <a href="https://github.com/giantorth/AZOM/releases/download/dev-latest/MozaPlugin_dev.zip" target="_blank" rel="noopener">MozaPlugin_dev.zip</a>. Expect bugs — use the stable release if you need reliability.</p>
+        <p class="dev">Every open pull request publishes per-commit pre-releases on the <a href="https://github.com/giantorth/AZOM/releases" target="_blank" rel="noopener">releases page</a>. Easier: in the plugin, open <b>Options &rsaquo; Updates</b> and pick the PR in the release-channel dropdown to install and track it. Expect bugs — use the stable release if you need reliability.</p>
       </div>
     </div>
   </div>
@@ -314,9 +334,9 @@
     </div>
     <div class="data-grid">
       <div class="stat reveal">
-        <div class="big">17<span class="u">+</span></div>
+        <div class="big">70<span class="u">+</span></div>
         <div class="lab">SimHub properties</div>
-        <p>Base connection, MCU / MOSFET / motor temps, FFB strength, live steering angle &amp; position, pedal and paddle inputs — for use on your custom dashboards.</p>
+        <p>Base connection, MCU / MOSFET / motor temps, live torque, steering angle &amp; position, pedal and paddle inputs, telemetry state — plus every wheelbase setting, for use on your custom dashboards.</p>
         <div class="codechips">
           <span>AZOM.SteeringAngle</span>
           <span>AZOM.MotorTemp</span>
@@ -324,7 +344,7 @@
         </div>
       </div>
       <div class="stat reveal">
-        <div class="big">40<span class="u">+</span></div>
+        <div class="big">200<span class="u">+</span></div>
         <div class="lab">Bindable actions</div>
         <p>FFB strength, torque limit, rotation, display brightness, dashboard switching, work mode, AB9 vibration — each with fine and coarse steps, bindable to any button.</p>
         <div class="codechips">
@@ -335,9 +355,9 @@
         </div>
       </div>
       <div class="stat reveal">
-        <div class="big">11<span class="u">+</span></div>
+        <div class="big">12<span class="u">+</span></div>
         <div class="lab">Languages</div>
-        <p>Translated into 11 languages and growing. Follows SimHub's language setting, with a manual override.</p>
+        <p>Translated into 12 languages and growing. Follows SimHub's language setting, with a manual override.</p>
         <div class="codechips">
           <span>English</span>
           <span>Deutsch</span>
@@ -347,13 +367,14 @@
           <span>Italiano</span>
           <span>한국어</span>
           <span>Norsk</span>
+          <span>Português</span>
           <span>Русский</span>
           <span>Tiếng Việt</span>
           <span>简体中文</span>
         </div>
       </div>
     </div>
-    <p class="credit reveal" style="margin-top:26px">Full property and action reference lives in the <a href="https://github.com/giantorth/AZOM#simhub-properties" target="_blank" rel="noopener">README</a>.</p>
+    <p class="credit reveal" style="margin-top:26px">Full property and action reference: <a href="/guides/properties-and-actions/">Properties &amp; Actions Reference</a>.</p>
   </div>
 </section>
 

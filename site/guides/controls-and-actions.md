@@ -3,7 +3,7 @@ layout: guide.njk
 title: Controls & Actions
 description: Bind wheel buttons to AZOM actions — every wheelbase setting, clutch bite point, brightness, dashboard switching and more.
 tags: guide
-order: 15
+order: 18
 ---
 
 AZOM exposes 200+ bindable actions. **Every setting on the Base tab** can be nudged from a
@@ -43,6 +43,11 @@ buttons for FFB up/down and two more for dashboard previous/next.
 Every action is namespaced `AZOM.` and appears under the **AZOM** plugin in the Mapping
 Picker's target list. Each one nudges, sets or toggles exactly what the matching control in
 the plugin panel does, and persists the change.
+
+> **Full table.** The complete list, with every range and step size — and the matching
+> read-only properties — is in the
+> [Properties &amp; Actions Reference](/guides/properties-and-actions/). What follows is the
+> practical subset.
 
 ### Step actions
 
@@ -172,3 +177,6 @@ starting up, or the setting doesn't exist on your firmware (equalizer bands 7–
 > setting always goes through an action, which means a button press. Automatic,
 > telemetry-driven adjustment (say, easing off the centering force as the car slides) has
 > to be built into the plugin itself.
+
+Every property, with its type and range, is listed in the
+[Properties &amp; Actions Reference](/guides/properties-and-actions/).

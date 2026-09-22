@@ -54,6 +54,12 @@ on its own. The right column (**Game** equivalents) scales those same effects wh
 *game* requests them. Keep game effects near 100% so titles feel as intended, and use the
 wheelbase column to add your own baseline weight.
 
+## High-speed damping
+
+Two sliders that add damping once the wheel is actually moving quickly: **Damping Level**
+sets how much, and **Trigger Speed** sets the speed above which it starts applying. Useful
+for calming a light wheel in fast direction changes without weighing down slow steering.
+
 ## Protection &amp; soft limit
 
 **Hands-Off Protection** eases the wheel down safely when you let go, and **Steering Wheel
@@ -64,15 +70,30 @@ approach the rotation limit — raise **Stiffness** for a firmer end stop.
 
 The two graphs at the bottom are the fine-tuning tools:
 
-- **FFB Equalizer** — per-band gain across the frequency range. 100% is neutral; lift the
-  low bands for more road texture, drop the highs to tame grain. **Flat** and **Falloff**
-  are one-click starting points.
+- **FFB Equalizer** — per-band gain across the frequency range. 100% is neutral, 400% is
+  maximum boost; lift the low bands for more road texture, drop the highs to tame grain.
+  **Linear** flattens it in one click, and the **Sensitivity** row (0–10) writes a canned
+  curve for each preset level — a quick way to find a starting shape before hand-tuning.
+  Bases on newer firmware expose ten bands; older ones expose six.
 - **FFB Output Curve** — drag the five nodes to reshape how input force maps to output.
   **Linear** is faithful; **S Curve** softens the centre; **Exponential** and **Parabolic**
   trade centre detail for stronger peaks.
 
 > **Tip:** Rather than build this by hand, import a community preset as a baseline and
 > tweak from there — see [Import a Profile](/guides/import-a-profile/).
+
+## Miscellaneous
+
+The odds and ends that live in the base rather than in a profile:
+
+- **Force Feedback Reversal** — flips the direction of force feedback.
+- **Base Status LED** — the base's own status light.
+- **Bluetooth** — the wheelbase's Bluetooth radio.
+- **Standby Mode** and **Standby after** — put the base into standby now, or have it drop
+  there on its own after 1 minute to 1 hour of inactivity (or never).
+
+> Base Status LED and Bluetooth are stored in the base itself, not in a per-game profile,
+> so they stay put when you switch games.
 
 ## Adjust any of it from a wheel button
 
