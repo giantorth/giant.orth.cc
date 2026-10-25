@@ -21,7 +21,7 @@ for telling two pedals with the same role apart on a multi-unit rig. Effect rout
 follows each unit's own identity, not USB port order, so pedals keep their settings across
 reboots and replugs.
 
-![The AZOM mBooster tab showing the pedal trace, pedal feel and sim input mapping curves](/docs/images/MBooster.png)
+![The AZOM mBooster tab showing the pedal trace, pedal feel and sim input mapping curves](/docs/images/mBooster.png)
 
 ## Pedal feel — the hardware side
 
@@ -49,6 +49,8 @@ The matching **Sim Input Mapping** card shapes what the game sees:
 
 Below the curves, each effect card vibrates the pedal motor from live telemetry, with a
 **Test** toggle so you can feel it parked:
+
+![The AZOM mBooster tab's effect cards, custom effects and sleep timeout](/docs/images/mBoosterEffects.png)
 
 - **ABS** — pulses the brake pedal when the game reports ABS activity, with Frequency,
   Intensity and Smoothness.

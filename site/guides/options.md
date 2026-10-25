@@ -16,9 +16,9 @@ hopefully never need.
   the devices as soon as SimHub starts, so the rig matches the profile before you ever
   launch a game.
 - **Wheelbase LFE source** — chooses who owns the wheelbase's three low-frequency
-  oscillators: the **Plugin LFE tab** (the default, see
-  [LFE Effects](/guides/lfe-effects/)) or **SimHub ShakeIt**, which puts them in the
-  ShakeIt Motors editor instead. Exactly one owns them, because the two would sum on the
+  oscillators: the **Plugin LFE tab** (see [LFE Effects](/guides/lfe-effects/)) or
+  **SimHub ShakeIt** (the default on new installs), which puts them in the ShakeIt Motors
+  editor instead. ShakeIt needs SimHub 9.12 or newer. Exactly one owns them, because the two would sum on the
   wire. Switching rewrites the device definition, so SimHub needs a restart. The row only
   appears on LFE-capable firmware.
 - **Forza Horizon compatibility** — a persistent wheelbase-side mode for the Forza titles.

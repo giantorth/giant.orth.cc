@@ -11,7 +11,7 @@ software-defined, and the **AB9** tab is where you define them. The tab appears
 automatically when an AB9 is detected, and like everything else in AZOM the settings are
 stored per game through SimHub's profile system.
 
-![The AZOM AB9 tab showing input mode, mechanical layout, feel sliders and vibration settings](/docs/images/AB9Shifter.png)
+![The AZOM AB9 tab showing input mode, mechanical layout, feel sliders and vibration settings](/docs/images/AB9.png)
 
 ## Input mode
 

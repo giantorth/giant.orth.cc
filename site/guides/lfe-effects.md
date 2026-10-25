@@ -6,19 +6,39 @@ tags: guide
 order: 6
 ---
 
-The **LFE Effects** tab turns your wheelbase into a bass shaker. AZOM renders three
-low-frequency vibration channels on the host every frame and streams them to the base at
-50 Hz — engine rumble that tracks RPM, ABS pulses, gearshift thumps, or anything you can
-express as a formula. It needs base firmware **1.2.10.10 or newer**; the tab only appears
-on bases that support it.
+LFE turns your wheelbase into a bass shaker: three low-frequency vibration channels,
+rendered on the host from live telemetry and streamed to the base at 50 Hz — engine rumble
+that tracks RPM, ABS pulses, gearshift thumps, or anything you can express as a formula. It
+needs base firmware **1.2.10.10 or newer**.
 
 This is separate from the Base tab's **Gearshift Vibration**, which is a fixed effect the
 firmware plays on its own — LFE effects are computed live from telemetry and layered
 together.
 
+You build LFE effects in one of two places, chosen by **Wheelbase LFE source** on the
+[Options tab](/guides/options/):
+
+- **SimHub ShakeIt** — the default on new installs. Needs SimHub 9.12 or newer.
+- **Plugin LFE tab** — AZOM's own tab with presets and formula-driven slots. Always used on
+  older SimHub.
+
+Only one can drive the base at a time, and switching needs a SimHub restart.
+
+## SimHub ShakeIt
+
+The wheelbase appears under **Devices** as its own model-named device (MOZA R16, MOZA R21,
+…). Open its **Haptics** tab and build effects exactly as you would for a bass shaker.
+
+![The MOZA R16 wheelbase device's Haptics tab in SimHub with ShakeIt effects](/docs/images/BaseLFE.png)
+
+## The LFE Effects tab
+
+With the source set to **Plugin LFE tab**, the **LFE Effects** tab appears in the AZOM
+panel.
+
 ![The AZOM LFE Effects tab showing engine presets and three effect slots](/docs/images/LfeEffects.png)
 
-## Engine presets
+### Engine presets
 
 The **Engine Presets** card manages the whole three-slot setup as one unit. Four built-ins
 ship with the plugin — **Additive Engine**, **Big Rig**, **Detuned V8** and **Road
@@ -30,7 +50,7 @@ The live graph draws each slot's output — amplitude envelope and computed freq
 you can see what the formulas are doing before you feel it. **Test** plays the whole
 preset through the base while you're parked.
 
-## The three effect slots
+### The three effect slots
 
 Each of **Effects Slot 1–3** is an independent vibration generator:
 
@@ -46,7 +66,7 @@ Each of **Effects Slot 1–3** is an independent vibration generator:
 
 Every slot has its own **Test** button, so you can tune one channel at a time.
 
-## Formulas — the f(x) buttons
+### Formulas — the f(x) buttons
 
 Any control with an *f(x)* button accepts a live expression instead of a fixed value —
 SimHub properties in square brackets, evaluated every tick. The stock engine preset is a
@@ -60,7 +80,7 @@ good template:
 Anything SimHub exposes as a property can drive a slot — wheel slip, brake pressure,
 suspension travel, your own NCalc math.
 
-## Gearshift mode extras
+### Gearshift mode extras
 
 When a slot's Mode is **Gearshift**, two extra controls appear: **Vibrate on Neutral**
 plays the thump when you land in neutral, and **Shift Debounce** stops a fast double-shift

@@ -49,9 +49,11 @@ Download the profile that matches your wheel:
 | KS | [MOZA-KS.atsrdevice](/docs/ATSR/MOZA-KS.atsrdevice) |
 | GS V2 | [MOZA-GS-V2.atsrdevice](/docs/ATSR/MOZA-GS-V2.atsrdevice) |
 | ES | [MOZA-ES.atsrdevice](/docs/ATSR/MOZA-ES.atsrdevice) |
+| RS V2 | [MOZA-RS-V2.atsrdevice](/docs/ATSR/MOZA-RS-V2.atsrdevice) |
 | Vision GS | [MOZA-Vision-GS.atsrdevice](/docs/ATSR/MOZA-Vision-GS.atsrdevice) |
 | FSR V1 | [MOZA-FSR1.atsrdevice](/docs/ATSR/MOZA-FSR1.atsrdevice) |
 | FSR V2 | [MOZA-FSR2.atsrdevice](/docs/ATSR/MOZA-FSR2.atsrdevice) |
+| CM2 dash | [CM2.atsrdevice](/docs/ATSR/CM2.atsrdevice) |
 
 ## 3 · Select your wheelbase / hub device
 

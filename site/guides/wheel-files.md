@@ -14,6 +14,8 @@ MOZA Dashboard Studio project or from a SimHub dashboard you already own.
 Open your wheel (or a stand-alone CM1/CM2 dash) under **Devices**, then switch to
 **Files**.
 
+![The MOZA Wheel Files tab showing Dashboard Upload and the list of dashboards on the wheel](/docs/images/WheelFiles.png)
+
 ## Wheel Files — what's on the device
 
 The **Wheel Files** card lists every dashboard currently stored on the wheel, with its
@@ -46,26 +48,14 @@ The **Upload Source** card on the right chooses where the dashboard comes from:
 tracks progress, and the wheel's **RPM bar doubles as a progress bar** — the LEDs stop
 following telemetry and fill as the transfer lands, so you can watch it from the cockpit.
 
-A few things worth knowing:
-
-- **Only one upload at a time.** Clicking Upload again while one is running is declined
-  rather than started, because two transfers fighting over the same connection break both.
-- **A stalled upload now fails instead of hanging.** If the transfer can't complete you'll
-  get an error, not a percentage that sits still forever.
-- **Re-uploading a dashboard keeps your per-game choice.** The wheel changes a dashboard's
-  internal id on every upload, so AZOM remembers your selection by name, and the channel
-  mappings follow it.
 
 ## Authoring: Dashboard Studio
 
-If MOZA Dashboard Studio is installed (it ships inside Pit House, as
-`bin\MOZA Dashboard Studio.exe`), two more buttons light up:
+If MOZA Dashboard Studio is installed two more buttons light up:
 
-- **Edit in Studio** — opens the selected dashboard in Studio. It takes any path, not just
-  Studio's own project folder, so a `.mzdash` from anywhere can be edited.
+- **Edit in Studio** — opens the selected dashboard in Studio.
 - **New Dashboard…** — creates a fresh dashboard in Studio, with the canvas already sized
-  for the display that's connected. The dimensions come from the wheel itself, not from a
-  built-in default, so the layout fits the screen you're actually authoring for.
+  for the display that's connected. 
 
 Save in Studio, come back, **Refresh** the library, and upload.
 
@@ -95,4 +85,4 @@ place. A converted dashboard shows up in the upload list straight away.
 
 > **Layout work still belongs in Studio.** AZOM converts and uploads; it does not render
 > SimHub dashboard templates or HTML overlays to the wheel. The wheel draws its screen in
-> firmware from the MOZA format, and that format is what has to arrive.
+> firmware from the MOZA format.
