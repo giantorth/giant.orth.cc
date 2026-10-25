@@ -1,0 +1,10 @@
+---
+permalink: /guides/guides.json
+eleventyExcludeFromCollections: true
+---
+{#- Machine-readable guide list for the plugin's About tab, in site order. -#}
+[
+{%- for g in collections.guides %}
+  {"slug": {{ g.fileSlug | dump | safe }}, "title": {{ g.data.title | dump | safe }}, "description": {{ g.data.description | dump | safe }}, "url": {{ ("https://giant.orth.cc" + g.url) | dump | safe }}}{% if not loop.last %},{% endif %}
+{%- endfor %}
+]
