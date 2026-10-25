@@ -4,20 +4,18 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-<meta name="theme-color" content="#070809" />
-<title>AZOM — The MOZA Bridge for SimHub</title>
-<meta name="description" content="AZOM is an unofficial, open-source SimHub plugin that turns SimHub into complete replacement software for your MOZA sim racing hardware — LED effects, LCD dashboard telemetry, and full device configuration on Linux and Windows." />
-<meta property="og:title" content="AZOM — The MOZA Bridge for SimHub" />
-<meta property="og:description" content="Reverse-engineered, open-source SimHub plugin for MOZA hardware. LED effects, dashboard telemetry, full device control." />
+<meta name="theme-color" content="#131416" />
+<title>AZOM: MOZA hardware in SimHub</title>
+<meta name="description" content="AZOM is a free, open-source SimHub plugin that gives SimHub full control of MOZA sim racing hardware: wheelbase, wheel, pedals, shifters, stalks and motion settings, LED effects and dashboard telemetry, on Windows and Linux." />
+<meta property="og:title" content="AZOM: MOZA hardware in SimHub" />
+<meta property="og:description" content="Free, open-source SimHub plugin for MOZA hardware. Every setting, LED effects, dashboard telemetry and per-game profiles." />
 <meta property="og:type" content="website" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="/styles.css?v=20260712" />
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Barlow:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/styles.css?v=20261025" />
 </head>
-<body>
-
-<!-- ===== reusable wheel mark ===== -->
+<body class="home">
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <symbol id="azom-wheel" viewBox="-4 -4 248 248">
     <mask id="awm" maskUnits="userSpaceOnUse" x="-4" y="-4" width="248" height="248">
@@ -33,460 +31,127 @@
   </symbol>
 </svg>
 
-<!-- ===== nav ===== -->
-<header class="nav" id="nav">
-  <div class="wrap nav-in">
-    <a class="brand" href="#top">
-      <svg class="mark"><use href="#azom-wheel"/></svg>
-      <b>AZOM</b>
-    </a>
-    <nav class="nav-links">
-      <a class="lk" href="#why">Why</a>
-      <a class="lk" href="#features">Features</a>
-      <a class="lk" href="#screens">Screens</a>
-      <a class="lk" href="#install">Install</a>
-      <a class="lk" href="#data">Data</a>
-    </nav>
-    <div class="nav-cta">
-      <a class="btn sm guide-btn" href="/guides/">Guides</a>
-      <a class="btn sm icon" href="https://github.com/giantorth/AZOM" target="_blank" rel="noopener" aria-label="GitHub repository"><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg></a>
-      <a class="btn sm primary" href="https://github.com/giantorth/AZOM/releases/latest" target="_blank" rel="noopener">Download</a>
-    </div>
-  </div>
-</header>
+<div class="wrap">
+  <header class="site-head">
+    <a class="brand" href="/"><svg><use href="#azom-wheel"/></svg>AZOM</a>
+    <a class="l" href="#features">Features</a>
+    <a class="l" href="#install">Install</a>
+    <a class="l" href="/guides/">Guides</a>
+    <a class="l" href="https://github.com/giantorth/AZOM" target="_blank" rel="noopener">GitHub</a>
+    <a class="btn go sm" href="https://github.com/giantorth/AZOM/releases/latest" target="_blank" rel="noopener">Download</a>
+  </header>
 
-<!-- ===== hero + why (merged) ===== -->
-<section class="hero" id="top">
-  <div class="grid-bg"></div>
-  <div class="hero-glow"></div>
-  <svg class="hero-watermark"><use href="#azom-wheel"/></svg>
+  <div class="hero">
+    <div class="rev live" id="rev"></div>
+    <h1>Your MOZA rig.<br><span>Driven by SimHub.</span></h1>
+    <div class="hero-row">
+      <p>AZOM is a free, open-source SimHub plugin that replaces <b>Pithouse</b>. Wheelbase, wheel, pedals and shifter settings, LED effects and dashboard telemetry, on <b>Windows and Linux</b>.</p>
+      <div class="ctas">
+        <a class="btn go" href="https://github.com/giantorth/AZOM/releases/latest" target="_blank" rel="noopener">Download</a>
+        <a class="btn" href="https://discord.gg/J4enw43e62" target="_blank" rel="noopener">Discord</a>
+      </div>
+    </div>
+    <div class="readout">
+      <div><small>License</small><b>GPL-3.0</b></div>
+      <div><small>Runs on</small><b>Windows / Linux</b></div>
+      <div><small>SimHub</small><b>9.12+</b></div>
+      <div><small>Languages</small><b>12</b></div>
+    </div>
+    <div class="shot"><img src="docs/images/BasePage.png" alt="The AZOM plugin panel inside SimHub" /></div>
+  </div>
+
+  <section class="about" id="why">
+    <p class="lead">Your MOZA hardware, with all of SimHub behind it.</p>
+    <p>AZOM gives SimHub full control of your MOZA gear: every setting Pithouse has, plus SimHub's LED effects, thousands of telemetry properties for the dashboard, and per-game, per-car profiles. One app instead of two.</p>
+  </section>
+
+  <section id="features">
+    <div class="sec">
+      <div class="intro">
+        <h2>Feature<br>sheet</h2>
+        <p>Grouped by what's on your rig. Tabs appear in the plugin only for hardware that's connected.</p>
+      </div>
+      <div class="spec">
+        <div class="row"><h3>Wheel<small>All MOZA wheels</small></h3><ul>
+          <li><b>LEDs in SimHub</b>RPM, flags, limiter and scripted effects through SimHub's effects pipeline.</li>
+          <li><b>Dashboard telemetry</b>Any SimHub property on any LCD channel, with hot reload.</li>
+          <li><b>Dashboard upload</b>Manage stored layouts, upload <code>.mzdash</code>, or convert a SimHub dash.</li>
+          <li><b>Knobs &amp; buttons</b>Per-knob colours and 200+ bindable actions.</li>
+        </ul></div>
+        <div class="row"><h3>Base<small>All MOZA bases</small></h3><ul>
+          <li><b>Full configuration</b>Rotation, FFB, damping, EQ and output curves.</li>
+          <li><b>LFE haptics</b>Engine, ABS and gearshift effects at 50&nbsp;Hz. FW 1.2.10.10+.</li>
+          <li><b>Ambient ring</b>R16, R21, R25 and R27 light rings as their own SimHub device.</li>
+          <li><b>SDK</b>Required for iRacing, 360&nbsp;Hz and LFE.</li>
+        </ul></div>
+        <div class="row"><h3>Pedals<small>CRP2 · mBooster · Handbrake</small></h3><ul>
+          <li><b>Active pedals</b>mBooster travel in mm and force in kg, with sim input mapping.</li>
+          <li><b>Passive pedals</b>CRP2 calibration and output curves, plus handbrake modes.</li>
+        </ul></div>
+        <div class="row"><h3>Pedal haptics<small>S12 · mBooster</small></h3><ul>
+          <li><b>S12 vibration units</b>One ShakeIt Motors device per pedal, built in SimHub's own effects editor.</li>
+          <li><b>mBooster effects</b>ABS, traction control, wheel spin, gear shift, lockup, road texture and custom formulas.</li>
+        </ul></div>
+        <div class="row"><h3>Shifters<small>AB9 · AB6 · HGP · SGP</small></h3><ul>
+          <li><b>AB9 / AB6</b>H-patterns and sequential, resistance, spring, damping, vibration, live gate display.</li>
+          <li><b>HGP + SGP</b>Separate tabs. Run both on one rig.</li>
+        </ul></div>
+        <div class="row"><h3>Stalks<small>Multi-function stalks</small></h3><ul>
+          <li><b>Any keyboard layout</b>Keys are stored as scan codes and shown with your layout's own names, so international keyboards can bind any key.</li>
+          <li><b>Truck-sim mode</b>Wipers, lights and indicators sent to ETS2/ATS as rebindable keys, with stage tracking and one-click re-sync.</li>
+        </ul></div>
+        <div class="row"><h3>Motion<small>HMA150</small></h3><ul>
+          <li><b>SimHub Motion output</b>Game telemetry and engine vibration streamed to the platform.</li>
+          <li><b>Platform setup</b>Port setup, self-tests, motion effects, stroke and lighting. Imports Motion Manager presets.</li>
+        </ul></div>
+        <div class="row"><h3>Dash<small>CM1 · CM2</small></h3><ul>
+          <li><b>Default channel maps</b>Tyres, timing, fuel and flags bound out of the box.</li>
+        </ul></div>
+        <div class="row"><h3>Profiles<small>Every device</small></h3><ul>
+          <li><b>Per game, per car</b>Settings switch when you launch a title.</li>
+          <li><b>Pithouse import</b>Presets load with a diff of every changed value.</li>
+        </ul></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="install">
+    <h2 style="margin-bottom:36px">Install</h2>
+    <ol class="inst">
+      <li>Download <code>MozaPlugin_&lt;version&gt;.zip</code> from <a href="https://github.com/giantorth/AZOM/releases/latest" target="_blank" rel="noopener">Releases</a>.</li>
+      <li>Extract <code>MozaPlugin.dll</code> into the SimHub folder.</li>
+      <li>Start SimHub. AZOM is under <b>Settings › Plugins</b>.</li>
+      <li>Connect your hardware, restart SimHub, then search Devices for MOZA.</li>
+    </ol>
+  </section>
+</div>
+
+<div class="sponsor" id="sponsor">
   <div class="wrap">
-    <div class="splitA merged">
-      <div class="colL">
-        <div class="lockup left reveal">
-          <svg class="mark"><use href="#azom-wheel"/></svg>
-          <h1>AZOM</h1>
-        </div>
-        <div class="tagrule left reveal"><span>The MOZA Bridge for SimHub</span><span class="ln"></span></div>
-        <div class="sub2 left reveal">Reverse-Engineered · Race-Ready</div>
-        <p class="pitch left reveal">Complete replacement software for your <b>MOZA</b> sim racing hardware — LED effects, LCD dashboard telemetry, and full device configuration, driven entirely through <b>SimHub</b>.</p>
-        <div class="ctas left reveal">
-          <a class="btn primary" href="https://github.com/giantorth/AZOM/releases/latest" target="_blank" rel="noopener">Download latest release <span class="arw">↗</span></a>
-          <a class="btn spon-btn" href="#sponsor"><span class="hrt">♥</span> Sponsor</a>
-          <a class="btn" href="https://discord.gg/J4enw43e62" target="_blank" rel="noopener">Join Discord</a>
-        </div>
-        <div class="metrics reveal">
-          <span class="metric"><b>GPL-3.0</b></span>
-          <span class="metric">Windows &amp; Linux</span>
-          <span class="metric">12 languages</span>
-          <span class="metric">SimHub 9.11.8+</span>
-        </div>
-        <div class="why-merge reveal" id="why">
-          <h2 class="h2">MOZA hardware, finally fluent in SimHub.</h2>
-          <p class="lede" style="margin-top:18px">MOZA makes excellent sim racing hardware — but Pithouse, their companion software, is Windows-only. Linux users had no official way to manage LED effects or stream telemetry to their wheel's dashboard.</p>
-          <ul class="why-points">
-            <li>SimHub runs on Linux via Proton/Wine — this plugin opens MOZA hardware to its entire ecosystem.</li>
-            <li>Map any of the thousands of SimHub data points to your wheel's LCD dashboard.</li>
-            <li>Drive your LEDs through SimHub's full effects pipeline — superb paired with ATSR-EVO.</li>
-            <li>Cross-platform hardware control with first-class, built-in telemetry.</li>
-          </ul>
-          <p class="credit">Built on the work of <a href="https://github.com/Lawstorant/boxflat" target="_blank" rel="noopener">Boxflat</a>, Linux software for MOZA control.</p>
-        </div>
-      </div>
-      <div class="colR reveal">
-        <div class="shotwrap">
-          <div class="shot floatshot">
-            <div class="bar"><i></i><i></i><i></i><span class="ttl">SimHub › Plugins › AZOM</span></div>
-            <img src="docs/images/BasePage.png" alt="The AZOM plugin panel inside SimHub, showing steering angle, temperatures, bandwidth and FFB settings" loading="lazy" />
-          </div>
-          <p class="cap"><b>The plugin panel</b> — wheelbase health, FFB, effects and per-game profiles, mirroring Pithouse.</p>
-        </div>
-      </div>
-    </div>
+    <div><h2>Keep it running</h2><p>AZOM is built in spare time. Sponsorship buys more hardware to test against.</p></div>
+    <div class="ctas"><a class="btn" href="https://github.com/sponsors/giantorth" target="_blank" rel="noopener">GitHub Sponsors</a><a class="btn" href="https://ko-fi.com/giantorth" target="_blank" rel="noopener">Ko-fi</a></div>
   </div>
-</section>
+</div>
 
-<!-- ===== features ===== -->
-<section class="band" id="features">
+<footer class="site-foot">
   <div class="wrap">
-    <div class="sec-head reveal">
-      <p class="eyebrow">Capabilities</p>
-      <h2 class="h2">Everything your hardware does — and everything SimHub adds.</h2>
-    </div>
-    <div class="feat-grid">
-      <div class="card reveal">
-        <div class="idx">01</div>
-        <h3>SimHub Integration</h3>
-        <p>Wheels &amp; dashboards register as native SimHub devices. Drive LEDs through the full Button &amp; Telemetry effects pipeline — RPM, flags, limiter animations, scripted effects. Per-model definitions deploy automatically.</p>
-      </div>
-      <div class="card reveal">
-        <div class="idx">02</div>
-        <h3>Dashboard Telemetry</h3>
-        <p>Stream any SimHub data point to your LCD via the proprietary binary telemetry protocol. Auto-detect layouts, hot-reload, per-channel custom mapping.</p>
-      </div>
-      <div class="card reveal">
-        <div class="idx">03</div>
-        <h3>Hardware Configuration</h3>
-        <p>Read/write control of wheelbase, wheel, handbrake, pedals and hub — rotation, FFB strength, damping, EQ, output curves. Tabs auto-show based on what's connected.</p>
-      </div>
-      <div class="card reveal">
-        <div class="idx">04</div>
-        <h3>Per-Game &amp; Per-Car Profiles</h3>
-        <p>Every setting and dashboard is stored through SimHub's profile system and switches automatically the moment you launch a different title — with per-car profiles for even finer control.</p>
-      </div>
-      <div class="card reveal">
-        <div class="idx">05</div>
-        <h3>AB9 Active Shifter</h3>
-        <p>Full configuration: 5+R / 6+R / 7+R / sequential patterns, resistance, spring, damping and friction feel sliders, plus engine and gear-shift vibration.</p>
-      </div>
-      <div class="card reveal">
-        <div class="idx">06</div>
-        <h3>mBooster Pedal Haptics</h3>
-        <p>Pedal feel in real units — travel in mm, force in kg — plus telemetry effects: ABS, traction control, wheel spin, gear shift, lockup, road texture and custom formula effects.</p>
-      </div>
-      <div class="card reveal">
-        <div class="idx">07</div>
-        <h3>Wheelbase Ambient LEDs</h3>
-        <p>R16 / R21 / R25 / R27 bases expose their ambient light ring as a dedicated SimHub device at its real LED count — 12 on an R16, 18 on the rest — with standby animations, sleep mode, brightness and startup colors.</p>
-      </div>
-      <div class="card reveal">
-        <div class="idx">08</div>
-        <h3>Full SDK Support</h3>
-        <p>Full SDK integration required for <b>iRacing</b> and 360Hz and Low Frequency Effects.</p>
-      </div>
-      <div class="card reveal">
-        <div class="idx">09</div>
-        <h3>Wheelbase LFE Haptics</h3>
-        <p>Host-rendered low-frequency effects streamed to the base at 50&nbsp;Hz — engine, ABS and gearshift channels with live formula control and shareable presets. Firmware 1.2.10.10+.</p>
-      </div>
-      <div class="card reveal">
-        <div class="idx">10</div>
-        <h3>Multi-Function Stalks</h3>
-        <p>Button box or truck-sim mode — wipers, lights and indicators translated to ETS2/ATS keyboard controls with true stage tracking and one-click re-sync.</p>
-      </div>
-      <div class="card reveal">
-        <div class="idx">11</div>
-        <h3>HGP &amp; SGP Shifters</h3>
-        <p>Independent tabs for the H-pattern and sequential shifters, each with its own detection and per-profile settings — run both on one rig at the same time.</p>
-      </div>
-      <div class="card reveal">
-        <div class="idx">12</div>
-        <h3>Racing Dashes</h3>
-        <p>CM1 and CM2 dashes with full default channel maps — per-corner tyre data, timing, fuel and flags — every field ships a working SimHub binding out of the box.</p>
-      </div>
-      <div class="card reveal">
-        <div class="idx">13</div>
-        <h3>S12 Pedal Haptics</h3>
-        <p>MOZA's pedal vibration units register as one ShakeIt Motors device per pedal — build effects in SimHub's own editor and the plugin allocates them across the hardware's oscillators. SimHub 9.12+.</p>
-      </div>
-      <div class="card reveal">
-        <div class="idx">14</div>
-        <h3>Dashboard Upload &amp; Studio</h3>
-        <p>Manage the layouts stored on your wheel, upload new <code class="path">.mzdash</code> files, launch MOZA Dashboard Studio sized for the connected display — or convert a SimHub dashboard, with a full report of what carried across.</p>
-      </div>
-      <div class="card reveal">
-        <div class="idx">15</div>
-        <h3>Pit House Preset Import</h3>
-        <p>Read MOZA Pit House presets — classic and <code class="path">.mzpreset</code> — straight into a profile, with a diff of every value that will change before you apply it.</p>
-      </div>
-      <div class="card reveal">
-        <div class="idx">16</div>
-        <h3>One-Click Bug Reports</h3>
-        <p>The Help tab uploads a diagnostic bundle — logs, serial captures, settings and the full diagnostic report — with serial numbers and MCU UIDs masked. Or export the ZIP and attach it yourself.</p>
-      </div>
-    </div>
-
-    <div class="hw reveal">
-      <p class="eyebrow" style="margin-top:54px">Tested hardware</p>
-      <div class="chips">
-        <span class="chip"><span class="ok">✓</span>All MOZA bases</span>
-        <span class="chip"><span class="ok">✓</span>Universal Hub</span>
-        <span class="chip"><span class="ok">✓</span>ES wheels</span>
-        <span class="chip"><span class="ok">✓</span>Vision GS</span>
-        <span class="chip"><span class="ok">✓</span>GS V2P</span>
-        <span class="chip"><span class="ok">✓</span>KS Pro</span>
-        <span class="chip"><span class="ok">✓</span>CS Pro</span>
-        <span class="chip"><span class="ok">✓</span>FSR1</span>
-        <span class="chip"><span class="ok">✓</span>FSR2</span>
-        <span class="chip"><span class="ok">✓</span>AB9 active shifter</span>
-        <span class="chip"><span class="ok">✓</span>HGP shifter</span>
-        <span class="chip"><span class="ok">✓</span>SGP shifter</span>
-        <span class="chip"><span class="ok">✓</span>Multi-function stalks</span>
-        <span class="chip"><span class="ok">✓</span>mBooster pedals</span>
-        <span class="chip"><span class="ok">✓</span>Handbrake</span>
-        <span class="chip"><span class="ok">✓</span>CM1</span>
-        <span class="chip"><span class="ok">✓</span>CM2</span>
-        <span class="chip"><span class="ok">✓</span>CRP2 Pedals</span>
-      </div>
-      <p class="credit">Also includes gearshift bump-through-the-wheel, live wheel hotswap, and serial recovery after sleep/resume.</p>
-    </div>
-  </div>
-</section>
-
-<!-- ===== screens ===== -->
-<section class="band alt" id="screens">
-  <div class="wrap">
-    <div class="sec-head reveal">
-      <p class="eyebrow">A closer look</p>
-      <h2 class="h2">Real panels. Real hardware. Real telemetry.</h2>
-    </div>
-    <div class="gallery">
-      <div class="reveal">
-        <div class="shot">
-          <div class="bar"><i></i><i></i><i></i><span class="ttl">Devices › LEDs</span></div>
-          <img src="docs/images/WheelLEDs.png" alt="The wheel's LED groups listed as SimHub effects profiles" loading="lazy" />
-        </div>
-        <p class="cap"><b>Native LED pipeline</b> — buttons, telemetry, knob and individual LED groups, each a SimHub effects profile.</p>
-      </div>
-      <div class="reveal">
-        <div class="shot">
-          <div class="bar"><i></i><i></i><i></i><span class="ttl">Wheel › Knobs</span></div>
-          <img src="docs/images/WheelKnobs.png" alt="Per-knob colour rings and signal-mode configuration on the wheel" loading="lazy" />
-        </div>
-        <p class="cap"><b>Onboard knob colours</b> — per-knob rings, signal mode and idle animations that play on the wheel itself.</p>
-      </div>
-      <div class="reveal">
-        <div class="shot">
-          <div class="bar"><i></i><i></i><i></i><span class="ttl">Dashboard › Channels</span></div>
-          <img src="docs/images/WheelChannelMapping.png" alt="Dashboard channel mapping between SimHub properties and wheel display channels" loading="lazy" />
-        </div>
-        <p class="cap"><b>Channel mapping</b> — bind any SimHub property to each LCD dashboard channel.</p>
-      </div>
-      <div class="reveal">
-        <div class="shot">
-          <div class="bar"><i></i><i></i><i></i><span class="ttl">Controls &amp; events</span></div>
-          <img src="docs/images/ControlsandEvents.png" alt="Wheel buttons mapped to AZOM actions in SimHub's Controls and events" loading="lazy" />
-        </div>
-        <p class="cap"><b>Cockpit control</b> — map wheel buttons to 200+ AZOM actions like FFB strength and brightness.</p>
-      </div>
-      <div class="reveal">
-        <div class="shot">
-          <div class="bar"><i></i><i></i><i></i><span class="ttl">AZOM › LFE Effects</span></div>
-          <img src="docs/images/LfeEffects.png" alt="The AZOM LFE Effects tab with engine presets and three formula-driven effect slots" loading="lazy" />
-        </div>
-        <p class="cap"><b>Base haptics</b> — three LFE slots with live formulas and shareable engine presets.</p>
-      </div>
-      <div class="reveal">
-        <div class="shot">
-          <div class="bar"><i></i><i></i><i></i><span class="ttl">AZOM › mBooster</span></div>
-          <img src="docs/images/mBooster.png" alt="The AZOM mBooster tab with pedal feel and sim input mapping curve editors" loading="lazy" />
-        </div>
-        <p class="cap"><b>Pedal feel</b> — travel, stiffness and force in real units, with sim input mapping.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===== install ===== -->
-<section class="band" id="install">
-  <div class="wrap install-grid">
-    <div class="reveal">
-      <p class="eyebrow">Get started</p>
-      <h2 class="h2">Installed in four steps.</h2>
-      <ol class="steps">
-        <li><span class="num"></span><div><h4>Download the release</h4><p>Grab the latest <code class="path">MozaPlugin_&lt;version&gt;.zip</code> from the <a href="https://github.com/giantorth/AZOM/releases/latest" target="_blank" rel="noopener">Releases page</a>.</p></div></li>
-        <li><span class="num"></span><div><h4>Drop in the DLL</h4><p>Extract <code class="path">MozaPlugin.dll</code> into your SimHub directory — defaults to <code class="path">C:\Program Files (x86)\SimHub\</code>.</p></div></li>
-        <li><span class="num"></span><div><h4>Start SimHub</h4><p>The plugin appears under <b>Settings › Plugins</b> as “AZOM”.</p></div></li>
-        <li><span class="num"></span><div><h4>Connect &amp; detect</h4><p>Plug in your hardware and restart SimHub. Your wheel can be found under Devices by searching for MOZA.</p></div></li>
-      </ol>
-      <p class="credit" style="margin-top:22px">Need the screen-by-screen version? Read <a href="/guides/install-the-plugin/">Install the Plugin</a> and <a href="/guides/add-your-device/">Add Your Device</a>, or browse <a href="/guides/">all guides</a>.</p>
-      <a class="btn" href="/guides/" style="margin-top:18px">Read the guides <span class="arw">↗</span></a>
-    </div>
-    <div class="reveal">
-      <div class="admon warn">
-        <div class="lbl"><span class="leds"><i class="a"></i></span> Close Pithouse first</div>
-        <p>Both apps talk to MOZA hardware over the same serial port and can't run together. Pithouse must be fully closed — not just minimized — before SimHub can connect.</p>
-      </div>
-      <div class="admon danger">
-        <div class="lbl"><span class="leds"><i class="r"></i></span> Use at your own risk</div>
-        <p>This software drives force-feedback hardware capable of high torque. It's provided “as is”, without warranty. You accept full responsibility for any damage or injury arising from its use.</p>
-      </div>
-      <div class="admon">
-        <div class="lbl" style="color:var(--sub)"><span class="leds"><i class="g"></i></span> Development builds</div>
-        <p class="dev">Every open pull request publishes per-commit pre-releases on the <a href="https://github.com/giantorth/AZOM/releases" target="_blank" rel="noopener">releases page</a>. Easier: in the plugin, open <b>Options &rsaquo; Updates</b> and pick the PR in the release-channel dropdown to install and track it. Expect bugs — use the stable release if you need reliability.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===== ATSR callout ===== -->
-<section class="band alt">
-  <div class="wrap">
-    <div class="atsr reveal">
-      <a href="https://github.com/ATSR-Alex/ATSR-Hub-EVO/" target="_blank" rel="noopener"><img src="docs/images/atsr-logomark-mono-white-lrg.webp" alt="ATSR-EVO" loading="lazy" /></a>
-      <div>
-        <p class="eyebrow">Better together</p>
-        <h3>Supercharge your LEDs with ATSR-EVO</h3>
-        <p>ATSR-Hub EVO's custom LED framework unlocks advanced telemetry- and input-driven effects and animations. Drive your wheel LEDs in incredibly sophisticated ways.</p>
-      </div>
-      <a class="btn" href="https://github.com/ATSR-Alex/ATSR-Hub-EVO/" target="_blank" rel="noopener">ATSR-EVO <span class="arw">↗</span></a>
-    </div>
-  </div>
-</section>
-
-<!-- ===== data ===== -->
-<section class="band" id="data">
-  <div class="wrap">
-    <div class="sec-head reveal">
-      <p class="eyebrow">For dashboard authors</p>
-      <h2 class="h2">Telemetry out. Controls in.</h2>
-      <p class="lede" style="margin-top:18px">The plugin exposes live MOZA properties for your SimHub dashboards and overlays, plus a deep set of bindable actions you can map to wheel buttons.</p>
-    </div>
-    <div class="data-grid">
-      <div class="stat reveal">
-        <div class="big">70<span class="u">+</span></div>
-        <div class="lab">SimHub properties</div>
-        <p>Base connection, MCU / MOSFET / motor temps, live torque, steering angle &amp; position, pedal and paddle inputs, telemetry state — plus every wheelbase setting, for use on your custom dashboards.</p>
-        <div class="codechips">
-          <span>AZOM.SteeringAngle</span>
-          <span>AZOM.MotorTemp</span>
-          <span>AZOM.FFBStrength</span>
-        </div>
-      </div>
-      <div class="stat reveal">
-        <div class="big">200<span class="u">+</span></div>
-        <div class="lab">Bindable actions</div>
-        <p>FFB strength, torque limit, rotation, display brightness, dashboard switching, work mode, AB9 vibration — each with fine and coarse steps, bindable to any button.</p>
-        <div class="codechips">
-          <span>Adjust FFB Strength</span>
-          <span>Set Display Brightness</span>
-          <span>Switch Dashboard</span>
-          <span>Adjust Steering Angle</span>
-        </div>
-      </div>
-      <div class="stat reveal">
-        <div class="big">12<span class="u">+</span></div>
-        <div class="lab">Languages</div>
-        <p>Translated into 12 languages and growing. Follows SimHub's language setting, with a manual override.</p>
-        <div class="codechips">
-          <span>English</span>
-          <span>Deutsch</span>
-          <span>Ελληνικά</span>
-          <span>Español</span>
-          <span>Français</span>
-          <span>Italiano</span>
-          <span>한국어</span>
-          <span>Norsk</span>
-          <span>Português</span>
-          <span>Русский</span>
-          <span>Tiếng Việt</span>
-          <span>简体中文</span>
-        </div>
-      </div>
-    </div>
-    <p class="credit reveal" style="margin-top:26px">Full property and action reference: <a href="/guides/properties-and-actions/">Properties &amp; Actions Reference</a>.</p>
-  </div>
-</section>
-
-<!-- ===== sponsor ===== -->
-<section class="band alt" id="sponsor">
-  <div class="wrap">
-    <div class="sponsor-head reveal">
-      <p class="eyebrow">Support the project</p>
-      <h2 class="h2">Keep the reverse-engineering going.</h2>
-      <p class="lede">AZOM is free, open-source, and built in spare time — decoding MOZA's serial protocol byte by byte, testing across a wall of hardware. If it earned a place in your rig, a little support keeps new devices, fixes and features coming.</p>
-    </div>
-
-    <div class="sponsor-grid">
-      <div class="spon gh reveal">
-        <div class="top">
-          <span class="ic">
-            <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
-          </span>
-          <div>
-            <h3>GitHub Sponsors</h3>
-            <div class="sub">Monthly or one-time</div>
-          </div>
-        </div>
-        <p>Sponsor directly on GitHub — recurring or one-off. Zero platform fees, and your support sits right alongside the code it funds.</p>
-        <a class="btn primary" href="https://github.com/sponsors/giantorth" target="_blank" rel="noopener">Become a sponsor <span class="arw">↗</span></a>
-      </div>
-
-      <div class="spon kofi reveal">
-        <div class="top">
-          <span class="ic">
-            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.88 8.94c-.46-2.42-2.2-3.6-4.86-3.6H2.78c-.42 0-.78.34-.78.76 0 0-.02 6.2.02 9.96.03 2.7 2.22 4.9 4.92 4.92 2.4.02 6.2.02 6.2.02 2.7 0 5-1.94 5.5-4.5 2.9-.16 5.06-2.06 4.24-7.56-.34 0 0 0 0 0zM7.7 14.66c-1.42-1.1-3.06-2.4-3.06-4.18 0-1.02.84-1.78 1.84-1.78.7 0 1.18.38 1.5.78.32-.4.8-.78 1.5-.78 1 0 1.84.76 1.84 1.78 0 1.78-1.64 3.08-3.06 4.18-.18.14-.42.14-.6 0zm10.74.62c-.42 0-.76-.04-.76-.04V9.32h.9c1.32 0 1.96.66 1.96 2.04 0 1.5-.78 3.92-2.1 3.92z"/></svg>
-          </span>
-          <div>
-            <h3>Ko-fi</h3>
-            <div class="sub">Buy a coffee</div>
-          </div>
-        </div>
-        <p>Prefer a quick one-time tip? Drop a coffee on Ko-fi — no account needed, and every bit goes toward more hardware to test against.</p>
-        <a class="btn" href="https://ko-fi.com/giantorth" target="_blank" rel="noopener">Tip on Ko-fi <span class="arw">↗</span></a>
-      </div>
-    </div>
-
-    <p class="sponsor-foot reveal">Not able to chip in? Starring the repo, filing good bug reports, and sharing your hardware results help just as much. <span class="heart">★</span></p>
-  </div>
-</section>
-
-<!-- ===== footer ===== -->
-<footer>
-  <div class="wrap">
-    <div class="foot-top">
-      <div class="foot-brand">
-        <a class="brand" href="#top">
-          <svg class="mark" style="width:36px;height:36px"><use href="#azom-wheel"/></svg>
-          <b style="font-size:19px">AZOM</b>
-        </a>
-        <p>An unofficial, open-source SimHub plugin for MOZA sim racing hardware.</p>
-      </div>
-      <div class="fcol">
-        <h5>Project</h5>
-        <a href="/guides/">Guides &amp; manuals</a>
-        <a href="https://github.com/giantorth/AZOM" target="_blank" rel="noopener">GitHub repository</a>
-        <a href="https://github.com/giantorth/AZOM/releases/latest" target="_blank" rel="noopener">Latest release</a>
-        <a href="https://github.com/giantorth/AZOM/blob/main/docs/DEVELOPMENT.md" target="_blank" rel="noopener">Development docs</a>
-        <a href="https://github.com/giantorth/AZOM/blob/main/docs/protocol/README.md" target="_blank" rel="noopener">Protocol reference</a>
-      </div>
-      <div class="fcol">
-        <h5>Community</h5>
-        <a href="https://discord.gg/J4enw43e62" target="_blank" rel="noopener">Discord server</a>
-        <a href="https://www.youtube.com/watch?v=KwLeVaii0TY" target="_blank" rel="noopener">Video guide</a>
-        <a href="https://github.com/sponsors/giantorth" target="_blank" rel="noopener">Sponsor</a>
-        <a href="https://ko-fi.com/giantorth" target="_blank" rel="noopener">Ko-fi</a>
-      </div>
-      <div class="fcol">
-        <h5>Built with</h5>
-        <a href="https://github.com/Lawstorant/boxflat" target="_blank" rel="noopener">Boxflat</a>
-        <a href="https://www.simhub.com/" target="_blank" rel="noopener">SimHub</a>
-      </div>
-    </div>
-    <div class="disclaimer">
-      <p>MOZA is a registered trademark of Gudsen Technology Co., Ltd. This project is not affiliated with, endorsed by, or sponsored by MOZA or Gudsen Technology. All trademarks are the property of their respective owners. Software provided “as is”, without warranty of any kind.</p>
-      <div class="meta">GPL-3.0 · <span id="yr"></span></div>
-    </div>
+    <div class="fl"><a href="/guides/">Guides</a><a href="https://github.com/giantorth/AZOM" target="_blank" rel="noopener">GitHub</a><a href="https://github.com/giantorth/AZOM/releases/latest" target="_blank" rel="noopener">Releases</a><a href="https://discord.gg/J4enw43e62" target="_blank" rel="noopener">Discord</a><a href="https://www.youtube.com/watch?v=D_ZmB0xn_KY" target="_blank" rel="noopener">Video guide</a><a href="https://github.com/giantorth/AZOM/blob/main/docs/protocol/README.md" target="_blank" rel="noopener">Protocol reference</a><a href="https://github.com/sponsors/giantorth" target="_blank" rel="noopener">Sponsor</a><a href="https://ko-fi.com/giantorth" target="_blank" rel="noopener">Ko-fi</a><a href="https://github.com/ATSR-Alex/ATSR-Hub-EVO/" target="_blank" rel="noopener">ATSR-Hub EVO</a><a href="https://github.com/Lawstorant/boxflat" target="_blank" rel="noopener">Boxflat</a><a href="https://www.simhub.com/" target="_blank" rel="noopener">SimHub</a></div>
+    <p>MOZA is a registered trademark of Gudsen Technology Co., Ltd. AZOM is not affiliated with or endorsed by MOZA or Gudsen Technology. Provided as is, without warranty. GPL-3.0.</p>
   </div>
 </footer>
 
 <script>
+// RPM sweep on the rev strip: 10 green, 4 yellow, 2 red, matching a real wheel
 (function(){
-  // nav shadow on scroll
-  var nav = document.getElementById('nav');
-  var onScroll = function(){ nav.classList.toggle('scrolled', window.scrollY > 8); };
-  onScroll(); window.addEventListener('scroll', onScroll, {passive:true});
-
-  // year
-  document.getElementById('yr').textContent = new Date().getFullYear();
-
-  // reveal on scroll — scroll/load based for reliability across environments
-  var reveals = Array.prototype.slice.call(document.querySelectorAll('.reveal'));
-  reveals.forEach(function(el,i){ el.style.transitionDelay = Math.min(i%6*55, 280) + 'ms'; });
-  function checkReveals(){
-    var vh = window.innerHeight || document.documentElement.clientHeight;
-    for(var i=reveals.length-1;i>=0;i--){
-      var el = reveals[i];
-      if(el.getBoundingClientRect().top < vh*0.92){ el.classList.add('in'); reveals.splice(i,1); }
-    }
-  }
-  checkReveals();
-  window.addEventListener('scroll', checkReveals, {passive:true});
-  window.addEventListener('resize', checkReveals);
-  window.addEventListener('load', checkReveals);
-  // safety net: never leave content hidden
-  setTimeout(function(){ document.querySelectorAll('.reveal:not(.in)').forEach(function(el){
-    if(el.getBoundingClientRect().top < (window.innerHeight||800)) el.classList.add('in'); }); }, 700);
+  var rev=document.getElementById('rev'), n=16, cls=function(i){return i<10?'g':i<14?'y':'r'};
+  for(var i=0;i<n;i++){var e=document.createElement('i');e.className=cls(i);rev.appendChild(e)}
+  if(matchMedia('(prefers-reduced-motion:reduce)').matches)return;
+  rev.classList.remove('live');
+  var leds=rev.children,t=0;
+  setInterval(function(){
+    t=(t+1)%40; var lit=t<26?Math.round(t*n/24):(t<34?(t%2?n:0):0);
+    for(var i=0;i<n;i++)leds[i].style.background=i<lit?'var(--'+cls(i)+')':'';
+  },70);
 })();
 </script>
 </body>

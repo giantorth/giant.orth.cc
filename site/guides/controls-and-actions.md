@@ -1,14 +1,14 @@
 ---
 layout: guide.njk
 title: Controls & Actions
-description: Bind wheel buttons to AZOM actions — every wheelbase setting, clutch bite point, brightness, dashboard switching and more.
+description: Bind wheel buttons to AZOM actions for every wheelbase setting, clutch bite point, brightness, dashboard switching and more.
 tags: guide
 order: 18
 ---
 
 AZOM exposes 200+ bindable actions. **Every setting on the Base tab** can be nudged from a
-button — FFB strength, rotation, spring, damper, the equalizer bands, the output curve —
-alongside display brightness, dashboard switching, the clutch bite point and work mode.
+button: FFB strength, rotation, spring, damper, the equalizer bands, the output curve.
+So can display brightness, dashboard switching, the clutch bite point and work mode.
 Map them to wheel buttons and you can tune your base without leaving the cockpit. The
 binding is done through SimHub's **Controls and events**.
 
@@ -23,16 +23,16 @@ the list of every button-to-action mapping on your rig. Click **New mapping** to
 
 The **Mapping Picker** opens. It has two halves:
 
-- **Source** (left) — the input. Press the wheel button you want to use and it
+- **Source** (left): the input. Press the wheel button you want to use and it
   auto-selects, or pick it from the list.
-- **Target** (right) — the action. Choose the **AZOM** plugin and scroll its actions:
+- **Target** (right): the action. Choose the **AZOM** plugin and scroll its actions:
   `AZOM.FfbStrengthUp`, `AZOM.RotationDown`, `AZOM.DisplayBrightnessUp`,
   `AZOM.DisplayToggle`, and so on. The `…Coarse` variants jump in bigger steps.
 
 ![The Mapping Picker dialog with a wheel input as source and AZOM actions as target](/docs/images/MappingPicker.png)
 
 Set the **Input mode** (ShortPress, LongPress, etc.), use **Trigger action now** to test
-it lands, and click **Ok**. Repeat for each control you want — a typical setup pairs two
+it lands, and click **Ok**. Repeat for each control you want. A typical setup pairs two
 buttons for FFB up/down and two more for dashboard previous/next.
 
 > **Fine vs Coarse.** Bind the normal action to a short press and the `…Coarse` version to
@@ -44,18 +44,18 @@ Every action is namespaced `AZOM.` and appears under the **AZOM** plugin in the 
 Picker's target list. Each one nudges, sets or toggles exactly what the matching control in
 the plugin panel does, and persists the change.
 
-> **Full table.** The complete list, with every range and step size — and the matching
-> read-only properties — is in the
+> **Full table.** The complete list, with every range and step size (and the matching
+> read-only properties), is in the
 > [Properties &amp; Actions Reference](/guides/properties-and-actions/). What follows is the
 > practical subset.
 
 ### Step actions
 
-Most settings can be stepped up or down from a button. Each registers four variants — add
+Most settings can be stepped up or down from a button. Each registers four variants. Add
 the suffix to the base name:
 
-- `…Up` / `…Down` — one **fine** step
-- `…UpCoarse` / `…DownCoarse` — one **coarse** step
+- `…Up` / `…Down`: one **fine** step
+- `…UpCoarse` / `…DownCoarse`: one **coarse** step
 
 So `AZOM.FfbStrengthUp` raises FFB by 5 %, and `AZOM.FfbStrengthDownCoarse` drops it by
 10 %. Values clamp to each setting's range.
@@ -75,7 +75,7 @@ Every slider on the [Base tab](/guides/configure-the-wheelbase/) has a matching 
 | `AZOM.Damper` | ±5 | ±10 | 0–100 % | Wheel damper |
 | `AZOM.Friction` | ±5 | ±10 | 0–100 % | Wheel friction |
 | `AZOM.Inertia` | ±10 | ±50 | 100–500 | Natural inertia (wheelbase effects) |
-| `AZOM.Spring` | ±5 | ±10 | 0–100 % | Wheel spring — the base's own centering force |
+| `AZOM.Spring` | ±5 | ±10 | 0–100 % | Wheel spring, the base's own centering force |
 | `AZOM.GameDamper` | ±5 | ±10 | 0–100 % | Game damper gain |
 | `AZOM.GameFriction` | ±5 | ±10 | 0–100 % | Game friction gain |
 | `AZOM.GameInertia` | ±5 | ±10 | 0–100 % | Game inertia gain |
@@ -84,7 +84,7 @@ Every slider on the [Base tab](/guides/configure-the-wheelbase/) has a matching 
 | `AZOM.SoftLimitStiffness` | ±1 | ±2 | 1–10 | Soft limit stiffness |
 | `AZOM.SpeedDamping` | ±5 | ±10 | 0–100 % | High-speed damping level |
 | `AZOM.SpeedDampingPoint` | ±10 | ±50 | 0–400 kph | High-speed damping trigger speed |
-| `AZOM.RoadSensitivity` | ±1 | ±2 | 0–10 | Road sensitivity preset — also rewrites the equalizer curve, exactly like the Base-tab preset buttons |
+| `AZOM.RoadSensitivity` | ±1 | ±2 | 0–10 | Road sensitivity preset (also rewrites the equalizer curve, exactly like the Base-tab preset buttons) |
 | `AZOM.Equalizer1` … `AZOM.Equalizer10` | ±5 | ±25 | 0–400/500 % | Individual FFB equalizer bands |
 | `AZOM.FfbCurveX1` … `X4`, `AZOM.FfbCurveY1` … `Y5` | ±5 | ±10 | 0–100 | Individual FFB output-curve nodes |
 
@@ -97,12 +97,12 @@ On 6-band bases, bands 7–10 do nothing.
 | Base action | Fine | Coarse | Range | Controls |
 |---|---|---|---|---|
 | `AZOM.DisplayBrightness` | ±5 | ±10 | 0–100 % | Wheel screen brightness |
-| `AZOM.ClutchSplit` | ±5 | ±10 | 0–100 % | Clutch split point — the combined-paddle bite point |
+| `AZOM.ClutchSplit` | ±5 | ±10 | 0–100 % | Clutch split point (the combined-paddle bite point) |
 | `AZOM.Ab9EngineIntensity` | ±5 | ±10 | 0–100 | AB9 shifter engine-vibration intensity |
 | `AZOM.Ab9EngineFrequency` | ±10 | ±20 | 0–200 Hz | AB9 shifter engine-vibration frequency |
 | `AZOM.Ab9GearShiftIntensity` | ±5 | ±10 | 0–100 | AB9 shifter gear-shift vibration |
 
-> **AB9 actions** only take effect when an AB9 active-shifter profile is loaded — see the
+> **AB9 actions** only take effect when an AB9 active-shifter profile is loaded. See the
 > [AB9 Active Shifter](/guides/ab9-shifter/) guide for what they control.
 
 > **Finding the clutch bite point on track.** `AZOM.ClutchSplit` moves the same slider as
@@ -112,14 +112,14 @@ On 6-band bases, bands 7–10 do nothing.
 
 ### Toggle actions
 
-Each of these registers three variants — `…On`, `…Off` and `…Toggle`:
+Each of these registers three variants (`…On`, `…Off` and `…Toggle`):
 
 | Base action | Controls |
 |---|---|
 | `AZOM.Protection` | Hands-off protection |
 | `AZOM.FfbReverse` | Force feedback reversal |
 | `AZOM.SoftLimitRetain` | Soft limit's "retain game FFB" |
-| `AZOM.PerformanceOutput` | Performance output — on is *Full*, off is *Reserved* |
+| `AZOM.PerformanceOutput` | Performance output (on is *Full*, off is *Reserved*) |
 | `AZOM.BaseStatusLed` | The base's status LED |
 | `AZOM.Bluetooth` | Wheelbase Bluetooth |
 
@@ -129,8 +129,8 @@ per-game profile, so they stay put when you switch games.
 ### Jump to a display brightness
 
 Eleven actions set the wheel screen to a fixed level in a single press, from
-`AZOM.DisplayBrightness0` (off) through `AZOM.DisplayBrightness100`, in steps of 10 —
-`AZOM.DisplayBrightness50`, `AZOM.DisplayBrightness80`, and so on.
+`AZOM.DisplayBrightness0` (off) through `AZOM.DisplayBrightness100`, in steps of 10
+(`AZOM.DisplayBrightness50`, `AZOM.DisplayBrightness80`, and so on).
 
 ### Dashboard & telemetry
 
@@ -155,25 +155,25 @@ nothing.
 | `AZOM.WorkModeOff` | Put the base into standby |
 | `AZOM.WorkModeToggle` | Flip the base between active and standby |
 | `AZOM.ClearLeds` | Turn off every LED the plugin is driving |
-| `AZOM.CalibrateCenter` | Re-center the wheelbase — hold the wheel at physical center when triggering |
+| `AZOM.CalibrateCenter` | Re-center the wheelbase (hold the wheel at physical center when triggering) |
 
 ## Reading the same settings in a dashboard
 
 Every setting above is also published as a SimHub **property** under the same name, minus
-the step suffix — `AZOM.Spring`, `AZOM.Torque`, `AZOM.ClutchSplitPoint`, `AZOM.Equalizer3`
+the step suffix: `AZOM.Spring`, `AZOM.Torque`, `AZOM.ClutchSplitPoint`, `AZOM.Equalizer3`
 and so on. Use them in a dashboard or overlay to show what a button just changed.
 
-They sit alongside the live status properties — `AZOM.BaseConnected`, `AZOM.McuTemp`,
+They sit alongside the live status properties: `AZOM.BaseConnected`, `AZOM.McuTemp`,
 `AZOM.MotorTemp`, `AZOM.SteeringAngle`, `AZOM.Throttle`, `AZOM.Brake`, `AZOM.Clutch`,
 `AZOM.LeftPaddle`, `AZOM.RightPaddle` and friends, which are read straight off the device
 and update even with no game running.
 
-A numeric setting reads `-1` when its value isn't available yet — the plugin is still
+A numeric setting reads `-1` when its value isn't available yet: the plugin is still
 starting up, or the setting doesn't exist on your firmware (equalizer bands 7–10 on
 6-band bases).
 
 > **Properties are read-only.** A dashboard formula can *display* `AZOM.Spring`, but it
-> can't set it — SimHub gives plugins no way to accept a value from a formula. Changing a
+> can't set it. SimHub gives plugins no way to accept a value from a formula. Changing a
 > setting always goes through an action, which means a button press. Automatic,
 > telemetry-driven adjustment (say, easing off the centering force as the car slides) has
 > to be built into the plugin itself.

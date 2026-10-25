@@ -6,7 +6,7 @@ tags: guide
 order: 21
 ---
 
-Some titles — **iRacing** in particular — and any game running MOZA's **360 Hz** mode need
+Some titles (**iRacing** in particular) and any game running MOZA's **360 Hz** mode need
 the official MOZA SDK. AZOM ships an embedded SDK server that provides all of the same
 functions you had before. You'll set this up once.
 
@@ -21,7 +21,7 @@ provides official MOZA SDK support for games that require it.
 
 > **Why a "MOZA Pit House.exe" appears.** While the server is enabled, the plugin runs a
 > tiny stand-in process that shows up in your task list as *MOZA Pit House.exe*. That's
-> expected — it lets MOZA SDK apps find the service by name. It exits automatically when
+> expected: it lets MOZA SDK apps find the service by name. It exits automatically when
 > you turn this off or close SimHub. Enabling this option also stops the real application
 > from launching automatically.
 
@@ -42,5 +42,5 @@ The two report independently, so a port collision or a stub that couldn't extrac
 against the piece that actually broke. If iRacing's force feedback isn't behaving, this is
 the first thing to check.
 
-> **Everything else on this tab** — language, updates, device definitions and the rest —
+> **Everything else on this tab** (language, updates, device definitions and the rest)
 > is covered in [Plugin Options](/guides/options/).

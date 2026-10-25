@@ -4,16 +4,16 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-<meta name="theme-color" content="#070809" />
-<title>{{ title }} — AZOM</title>
-<meta name="description" content="{{ description or 'Guides and manuals for AZOM, the open-source MOZA bridge for SimHub.' }}" />
-<meta property="og:title" content="{{ title }} — AZOM" />
-<meta property="og:description" content="{{ description or 'Guides and manuals for AZOM, the open-source MOZA bridge for SimHub.' }}" />
+<meta name="theme-color" content="#131416" />
+<title>{{ title }} · AZOM</title>
+<meta name="description" content="{{ description or 'Guides and manuals for AZOM, the open-source SimHub plugin for MOZA hardware.' }}" />
+<meta property="og:title" content="{{ title }} · AZOM" />
+<meta property="og:description" content="{{ description or 'Guides and manuals for AZOM, the open-source SimHub plugin for MOZA hardware.' }}" />
 <meta property="og:type" content="article" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="/styles.css" />
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Barlow:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/styles.css?v=20261025" />
 </head>
 <body>
 
@@ -34,75 +34,25 @@
 </svg>
 
 <!-- ===== nav ===== -->
-<header class="nav" id="nav">
-  <div class="wrap nav-in">
-    <a class="brand" href="/">
-      <svg class="mark"><use href="#azom-wheel"/></svg>
-      <b>AZOM</b>
-    </a>
-    <nav class="nav-links">
-      <a class="lk" href="/#why">Why</a>
-      <a class="lk" href="/#features">Features</a>
-      <a class="lk" href="/#screens">Screens</a>
-      <a class="lk" href="/#install">Install</a>
-    </nav>
-    <div class="nav-cta">
-      <a class="btn sm guide-btn{% if page.url and '/guides/' in page.url %} active{% endif %}" href="/guides/">Guides</a>
-      <a class="btn sm spon-btn" href="/#sponsor"><span class="hrt">♥</span> Sponsor</a>
-      <a class="btn sm" href="https://github.com/giantorth/AZOM" target="_blank" rel="noopener">GitHub</a>
-      <a class="btn sm primary" href="https://github.com/giantorth/AZOM/releases/latest" target="_blank" rel="noopener">Download</a>
-    </div>
-  </div>
-</header>
+<div class="wrap">
+  <header class="site-head">
+    <a class="brand" href="/"><svg><use href="#azom-wheel"/></svg>AZOM</a>
+    <a class="l" href="/#features">Features</a>
+    <a class="l" href="/#install">Install</a>
+    <a class="l{% if page.url and '/guides/' in page.url %} on{% endif %}" href="/guides/">Guides</a>
+    <a class="l" href="https://github.com/giantorth/AZOM" target="_blank" rel="noopener">GitHub</a>
+    <a class="btn go sm" href="https://github.com/giantorth/AZOM/releases/latest" target="_blank" rel="noopener">Download</a>
+  </header>
+</div>
 
 {{ content | safe }}
 
 <!-- ===== footer ===== -->
-<footer>
+<footer class="site-foot">
   <div class="wrap">
-    <div class="foot-top">
-      <div class="foot-brand">
-        <a class="brand" href="/">
-          <svg class="mark" style="width:36px;height:36px"><use href="#azom-wheel"/></svg>
-          <b style="font-size:19px">AZOM</b>
-        </a>
-        <p>An unofficial, open-source SimHub plugin for MOZA sim racing hardware.</p>
-      </div>
-      <div class="fcol">
-        <h5>Project</h5>
-        <a href="/guides/">Guides &amp; manuals</a>
-        <a href="https://github.com/giantorth/AZOM" target="_blank" rel="noopener">GitHub repository</a>
-        <a href="https://github.com/giantorth/AZOM/releases/latest" target="_blank" rel="noopener">Latest release</a>
-        <a href="https://github.com/giantorth/AZOM/blob/main/docs/protocol/README.md" target="_blank" rel="noopener">Protocol reference</a>
-      </div>
-      <div class="fcol">
-        <h5>Community</h5>
-        <a href="https://discord.gg/J4enw43e62" target="_blank" rel="noopener">Discord server</a>
-        <a href="https://www.youtube.com/watch?v=KwLeVaii0TY" target="_blank" rel="noopener">Video guide</a>
-        <a href="https://github.com/sponsors/giantorth" target="_blank" rel="noopener">Sponsor</a>
-        <a href="https://ko-fi.com/giantorth" target="_blank" rel="noopener">Ko-fi</a>
-      </div>
-      <div class="fcol">
-        <h5>Built with</h5>
-        <a href="https://github.com/Lawstorant/boxflat" target="_blank" rel="noopener">Boxflat</a>
-        <a href="https://www.simhub.com/" target="_blank" rel="noopener">SimHub</a>
-        <a href="https://github.com/ATSR-Alex/ATSR-Hub-EVO/" target="_blank" rel="noopener">ATSR-EVO</a>
-      </div>
-    </div>
-    <div class="disclaimer">
-      <p>MOZA is a registered trademark of Gudsen Technology Co., Ltd. This project is not affiliated with, endorsed by, or sponsored by MOZA or Gudsen Technology. All trademarks are the property of their respective owners. Software provided “as is”, without warranty of any kind.</p>
-      <div class="meta">GPL-3.0 · <span id="yr"></span></div>
-    </div>
+    <div class="fl"><a href="/guides/">Guides</a><a href="https://github.com/giantorth/AZOM" target="_blank" rel="noopener">GitHub</a><a href="https://github.com/giantorth/AZOM/releases/latest" target="_blank" rel="noopener">Releases</a><a href="https://discord.gg/J4enw43e62" target="_blank" rel="noopener">Discord</a><a href="https://www.youtube.com/watch?v=D_ZmB0xn_KY" target="_blank" rel="noopener">Video guide</a><a href="https://github.com/giantorth/AZOM/blob/main/docs/protocol/README.md" target="_blank" rel="noopener">Protocol reference</a><a href="https://github.com/sponsors/giantorth" target="_blank" rel="noopener">Sponsor</a><a href="https://ko-fi.com/giantorth" target="_blank" rel="noopener">Ko-fi</a><a href="https://github.com/ATSR-Alex/ATSR-Hub-EVO/" target="_blank" rel="noopener">ATSR-Hub EVO</a><a href="https://github.com/Lawstorant/boxflat" target="_blank" rel="noopener">Boxflat</a><a href="https://www.simhub.com/" target="_blank" rel="noopener">SimHub</a></div>
+    <p>MOZA is a registered trademark of Gudsen Technology Co., Ltd. AZOM is not affiliated with or endorsed by MOZA or Gudsen Technology. Provided as is, without warranty. GPL-3.0.</p>
   </div>
 </footer>
-
-<script>
-(function(){
-  var nav = document.getElementById('nav');
-  var onScroll = function(){ nav.classList.toggle('scrolled', window.scrollY > 8); };
-  onScroll(); window.addEventListener('scroll', onScroll, {passive:true});
-  document.getElementById('yr').textContent = new Date().getFullYear();
-})();
-</script>
 </body>
 </html>

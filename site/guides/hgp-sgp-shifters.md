@@ -1,12 +1,12 @@
 ---
 layout: guide.njk
 title: HGP & SGP Shifters
-description: Configure MOZA's passive H-pattern and sequential shifters — direction, paddle sync, LED colours, and the HGP's calibration routine.
+description: Configure MOZA's passive H-pattern and sequential shifters (direction, paddle sync, LED colours, and the HGP's calibration routine).
 tags: guide
 order: 11
 ---
 
-The HGP (H-pattern) and SGP (sequential) are MOZA's *passive* shifters — no motors, no
+The HGP (H-pattern) and SGP (sequential) are MOZA's *passive* shifters: no motors, no
 force feedback, unlike the [AB9](/guides/ab9-shifter/). AZOM gives each one its own tab,
 which appears when that shifter is detected.
 
@@ -15,16 +15,16 @@ tabs appear and each writes to its own hardware.
 
 > **Gear input is not configured here.** Your gears reach the game through the shifter's
 > normal controller surface, exactly as they always did. These tabs configure the device's
-> own settings over serial — nothing here changes how gears are reported.
+> own settings over serial. Nothing here changes how gears are reported.
 
 ## The HGP tab
 
 ### Shifter settings
 
-- **Reverse Direction** — flips the shift axis if the pattern reads backwards.
-- **Paddle Shift Sync** — keeps the wheel's paddles in step with the stick, so a paddle
+- **Reverse Direction**: flips the shift axis if the pattern reads backwards.
+- **Paddle Shift Sync**: keeps the wheel's paddles in step with the stick, so a paddle
   shift doesn't leave the game and the physical gate disagreeing.
-- **Shifter type** — **H-pattern** or **Sequential**. The HGP stores this in the device
+- **Shifter type**: **H-pattern** or **Sequential**. The HGP stores this in the device
   itself, and AZOM reads the value straight back after writing it, so the dropdown settles
   on what the shifter actually kept rather than what was requested.
 
@@ -43,7 +43,7 @@ shift R › 7th › R › Neutral
 ```
 
 Work through those positions and the shifter learns its own gate geometry. This is
-H-pattern only — the SGP tab has no calibration, because a sequential throw has nothing to
+H-pattern only. The SGP tab has no calibration, because a sequential throw has nothing to
 learn.
 
 ## The SGP tab
@@ -57,10 +57,10 @@ deliberately no shifter-type selector here: an SGP is sequential by construction
 
 The SGP carries two configurable indicator LEDs:
 
-- **LED 1 (S1)** and **LED 2 (S2)** — each picks from a fixed eight-colour palette: red,
+- **LED 1 (S1)** and **LED 2 (S2)** each pick from a fixed eight-colour palette: red,
   orange, yellow, green, cyan, blue, purple, white. The same palette Pit House offers; the
   hardware accepts nothing else.
-- **LED Brightness** — 0–10.
+- **LED Brightness**: 0–10.
 
 Both LEDs travel in a single hardware command, so changing either one re-sends the pair.
 
@@ -70,6 +70,6 @@ Shifter settings are read back from the device when it connects and only what yo
 changes is written, so a shifter's EEPROM isn't rewritten on every launch. A shifter that
 never answers its settings read is left alone entirely rather than written blind.
 
-> **Not sure which one you have?** The tab that appears tells you — AZOM identifies the
+> **Not sure which one you have?** The tab that appears tells you. AZOM identifies the
 > two by the name each reports, which is the only reply that differs between them. A
 > sequential shifter wired through the wheelbase is identified correctly as an SGP.

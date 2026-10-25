@@ -1,7 +1,7 @@
 ---
 layout: guide.njk
 title: Pedal Haptics
-description: Drive MOZA's S12 pedal vibration units from SimHub's ShakeIt editor — one device per pedal.
+description: Drive MOZA's S12 pedal vibration units from SimHub's ShakeIt editor, one device per pedal.
 tags: guide
 order: 9
 ---
@@ -25,7 +25,7 @@ different set of effects.
 ## Set up effects
 
 Open a pedal's device and go to its **Haptics** tab. Switch on the effects you want and set
-their volume — AZOM routes them to the pedal automatically.
+their volume. AZOM routes them to the pedal automatically.
 
 ![The MOZA S12 Brake device's Haptics tab in SimHub with ShakeIt effects enabled](/docs/images/PedalHaptics.png)
 

@@ -7,8 +7,8 @@ order: 13
 ---
 
 You don't have to build your force-feedback settings from scratch. AZOM can read MOZA Pit
-House preset files directly, so any community or official preset — or one you exported
-yourself — becomes a starting point. Crucially, it shows you a **diff** before changing a
+House preset files directly, so any community or official preset (or one you exported
+yourself) becomes a starting point. It shows you a **diff** before changing a
 thing.
 
 ## 1 · Open the Import tab
@@ -24,7 +24,7 @@ Use **Set folder…** if yours are somewhere else.
 
 ## 2 · Pick a preset
 
-Presets are grouped by type — **Wheel base (Motor)**, **Pedals**, or **Browse for file…**
+Presets are grouped by type: **Wheel base (Motor)**, **Pedals**, or **Browse for file…**
 for one sitting elsewhere. Both the classic Pit House presets and the newer `.mzpreset`
 format are understood. Select the preset you want and click **Next**.
 
@@ -42,15 +42,15 @@ untouched ones greyed out.
 ![The AZOM import review screen showing a diff of settings that will change](/docs/images/ImportProfile2.png)
 
 Anything the plugin can't map (Pit-House-only fields with no AZOM equivalent) is listed
-separately at the bottom as **not imported**, so there are no silent surprises.
+separately at the bottom as **not imported**, so nothing is dropped silently.
 
 ## 4 · Apply
 
 Happy with the diff? Click **Apply** and the values land in your active profile. Because
-profiles are per game, the import only affects the game you're currently set to — switch
+profiles are per game, the import only affects the game you're currently set to. Switch
 games and your other setups are untouched. [LFE Effects](/guides/lfe-effects/) settings
 ride along with the profile too.
 
 > **Back out any time.** Importing only writes the values shown in the diff. If you don't
 > like the result, import a different preset or adjust by hand on the
-> [Base tab](/guides/configure-the-wheelbase/) — nothing is permanent.
+> [Base tab](/guides/configure-the-wheelbase/). Nothing is permanent.

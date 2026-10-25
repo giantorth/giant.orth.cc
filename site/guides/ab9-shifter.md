@@ -6,7 +6,7 @@ tags: guide
 order: 10
 ---
 
-The AB9 is a motorised shifter — its gates, resistance and vibration are all
+The AB9 is a motorised shifter: its gates, resistance and vibration are all
 software-defined, and the **AB9** tab is where you define them. The tab appears
 automatically when an AB9 is detected, and like everything else in AZOM the settings are
 stored per game through SimHub's profile system.
@@ -22,21 +22,21 @@ lever for flight titles instead of a gear stick.
 
 The gate pattern the motor renders: **5+R Layout 1**, **6+R Layout 1 / 2**, **7+R
 Layout 1 / 2**, or **Sequential**. The layouts differ in where reverse sits and how the
-gates are spaced — pick the one that matches the car you drive most and the game's gearbox.
+gates are spaced. Pick the one that matches the car you drive most and the game's gearbox.
 
 ## Feel
 
 Five sliders set the mechanical character the motor renders on each axis:
 
-- **Mechanical Resistance** — how much effort a shift takes.
-- **Spring** — the centring force pulling the stick back to neutral.
-- **Natural Damping** — resistance to fast motion; higher feels heavier and calmer.
-- **Natural Friction** — constant drag through the whole throw.
-- **Max Output Torque Limit** — a ceiling on the total force the shifter will ever apply.
+- **Mechanical Resistance**: how much effort a shift takes.
+- **Spring**: the centring force pulling the stick back to neutral.
+- **Natural Damping**: resistance to fast motion; higher feels heavier and calmer.
+- **Natural Friction**: constant drag through the whole throw.
+- **Max Output Torque Limit**: a ceiling on the total force the shifter will ever apply.
 
 ## Engine vibration
 
-A host-rendered rumble played through the stick from live RPM — **Intensity** for how
+A host-rendered rumble played through the stick from live RPM: **Intensity** for how
 strong, **Frequency** for the pitch in Hz. Subtle values work best; the point is feeling
 the engine in your hand, not shaking the knob loose.
 
@@ -48,7 +48,7 @@ stops a quick double-shift from firing twice.
 
 > **Tune from the cockpit.** Engine intensity, engine frequency and gear-shift intensity
 > are all bindable actions (`AZOM.Ab9EngineIntensityUp`, `AZOM.Ab9EngineFrequencyDown`
-> and friends) — see [Controls &amp; Actions](/guides/controls-and-actions/).
+> and friends). See [Controls &amp; Actions](/guides/controls-and-actions/).
 
-> **Passive shifters** — the HGP and SGP have no motors and are configured on their own
+> **Passive shifters.** The HGP and SGP have no motors and are configured on their own
 > tabs; see [HGP &amp; SGP Shifters](/guides/hgp-sgp-shifters/).

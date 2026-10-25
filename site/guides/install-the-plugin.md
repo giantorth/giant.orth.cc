@@ -1,18 +1,18 @@
 ---
 layout: guide.njk
 title: Install the Plugin
-description: Drop the AZOM DLL into SimHub and enable it — the full visual walkthrough, folder to first launch.
+description: Drop the AZOM DLL into SimHub and enable it. A visual walkthrough from folder to first launch.
 tags: guide
 order: 2
 ---
 
-This is the detailed version of the install — every screen you'll see, in order. If
+This is the detailed version of the install: every screen you'll see, in order. If
 you just want the short path, the [Getting Started](/guides/getting-started/) overview
 has it. Either way the whole thing takes about two minutes.
 
 > **Close Pithouse first.** Pithouse and SimHub both talk to MOZA hardware over the
-> same serial port and **cannot run at the same time**. Fully quit Pithouse — check the
-> system tray and end it there too — before you launch SimHub.
+> same serial port and **cannot run at the same time**. Fully quit Pithouse (check the
+> system tray and end it there too) before you launch SimHub.
 
 ## 1 · Download the release
 
@@ -38,7 +38,7 @@ You can paste that path straight into the File Explorer address bar to jump ther
 ## 3 · Drop in the DLL
 
 Copy `MozaPlugin.dll` into that SimHub folder, alongside the other files. That's the
-entire installation — nothing to run, no installer.
+entire installation. There is nothing to run and no installer.
 
 ## 4 · Enable the plugin
 

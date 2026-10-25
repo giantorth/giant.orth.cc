@@ -7,7 +7,7 @@ order: 16
 ---
 
 If your wheel has an LCD, AZOM can push live race data to it through MOZA's binary
-telemetry protocol — speed, gear, lap times, fuel, tyre temps, flags and more. You pick a
+telemetry protocol. It carries speed, gear, lap times, fuel, tyre temps, flags and more. You pick a
 layout, then map each of its channels to a SimHub property.
 
 ## Turn on dashboard telemetry
@@ -19,8 +19,8 @@ test pattern** to confirm the screen is receiving data before you go racing.
 ![The Dashboard tab showing telemetry toggle, layout picker, display settings and channel mappings](/docs/images/WheelDashboard.png)
 
 The **Display** panel sets screen **Brightness**, **Standby Time** (how long before the
-LCD sleeps when idle) and, on wheels that support it, **Display Rotation** — *Off*,
-*Immediate*, or *Smooth*, which rotates the screen contents to stay upright as you steer.
+LCD sleeps when idle) and, on wheels that support it, **Display Rotation** (*Off*,
+*Immediate*, or *Smooth*), which rotates the screen contents to stay upright as you steer.
 
 ## Map the channels
 
@@ -30,8 +30,8 @@ the **pencil** on its row and search the full SimHub property tree.
 
 ![The channel mapping editor with a property search open](/docs/images/WheelChannelMapping.png)
 
-Type to filter — for example `gap` surfaces every gap-to-leader and gap-to-player
-property — pick one, and click **Ok**. The **Current value** column updates live, so you
+Type to filter (for example `gap` surfaces every gap-to-leader and gap-to-player
+property), pick one, and click **Ok**. The **Current value** column updates live, so you
 can confirm the binding is feeding real numbers.
 
 **Reset field** puts one row back to its default; **Reset to defaults** clears every
@@ -41,7 +41,7 @@ override on this dashboard.
 
 ## Master channel defaults
 
-The per-dashboard mappings above are per dashboard — change layouts and you start again.
+The per-dashboard mappings above apply to one dashboard only. Change layouts and you start again.
 **Master Defaults** opens a second mapper whose bindings apply to *every* dashboard.
 
 It has its own named profiles, with their own dropdown and New / Clone / Edit / Manage

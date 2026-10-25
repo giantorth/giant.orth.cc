@@ -7,7 +7,7 @@ order: 19
 ---
 
 [Controls &amp; Actions](/guides/controls-and-actions/) maps each wheel's buttons
-individually — fine for a single wheel. But if you hot-swap wheels or run several
+individually, which is fine for a single wheel. But if you hot-swap wheels or run several
 controllers, SimHub's **Control mapper** lets them act as one virtual controller, so the
 AZOM mappings you set up survive a wheel change instead of being redone per wheel.
 
@@ -26,7 +26,7 @@ Control mapper is an optional SimHub feature. Turn it on from **Add/remove featu
 >For this feature to work, you MUST enable **Recognize Simcube 2 wireless wheels and Fanatec Wheels as individual controllers**
 
 Once enabled, the **Control mapper** page is where you set the output mode and confirm your
-source controllers are recognised — for example a *Gudsen MOZA R5 Base - CS Pro* showing as
+source controllers are recognised, for example a *Gudsen MOZA R5 Base - CS Pro* showing as
 **Connected** while the *KS* it replaced sits **Unplugged**.
 
 ![The Control mapper page showing the target virtual controller and connected source controller](/docs/images/ControlMapperOption.png)

@@ -11,7 +11,7 @@ values you can show in a dashboard, overlay or formula; **actions** are the bind
 commands that change a setting from a button.
 
 For how to bind an action to a wheel button, see
-[Controls &amp; Actions](/guides/controls-and-actions/) — this page is the full table.
+[Controls &amp; Actions](/guides/controls-and-actions/). This page is the full table.
 
 ## Properties
 
@@ -26,10 +26,10 @@ Populated directly from the device, so they update even when no game is running.
 | `AZOM.McuTemp` | double | MCU temperature (°C or °F, per the temperature-unit setting) |
 | `AZOM.MosfetTemp` | double | MOSFET temperature (°C or °F, per the temperature-unit setting) |
 | `AZOM.MotorTemp` | double | Motor temperature (°C or °F, per the temperature-unit setting) |
-| `AZOM.CurrentTorque` | double | Live motor torque in Nm, unsigned — direction is dropped, so this is the magnitude whichever way the base is pulling. Refreshed at 5 Hz whether or not the settings panel is open |
+| `AZOM.CurrentTorque` | double | Live motor torque in Nm, unsigned: direction is dropped, so this is the magnitude whichever way the base is pulling. Refreshed at 5 Hz whether or not the settings panel is open |
 | `AZOM.CurrentTorqueRaw` | double | The same live torque in Nm, signed: the sign is the direction the base is pulling |
 | `AZOM.MaxTorque` | double | Highest `AZOM.CurrentTorque` seen this session, in Nm. Resets when a game starts |
-| `AZOM.TorqueLimit` | double | The wheelbase's rated peak torque in Nm (R9 = 9, R16 = 16, R25 = 25 …); `-1` if the base model isn't recognised. Fixed per base — for your configured output limit see `AZOM.Torque` |
+| `AZOM.TorqueLimit` | double | The wheelbase's rated peak torque in Nm (R9 = 9, R16 = 16, R25 = 25 …); `-1` if the base model isn't recognised. Fixed per base. For your configured output limit, see `AZOM.Torque` |
 | `AZOM.MaxAngle` | int | Max steering angle (degrees) |
 | `AZOM.ClutchSplitPoint` | int | Clutch split point (%) for the current wheel, as shown on the wheel device page (Paddles Mode = Combined) |
 | `AZOM.HidConnected` | bool | Whether a device HID surface is being read (live input is available) |
@@ -63,13 +63,13 @@ also a property, in the same units the slider shows. Each has a matching set of 
 below. Values track what the base reported on its last settings read, so they hold their
 defaults until the base answers after connect.
 
-The numeric ones read `-1` when the value isn't available — the plugin is still loading,
+The numeric ones read `-1` when the value isn't available: the plugin is still loading,
 or the setting doesn't exist on this firmware (equalizer bands 7–10 on 6-band bases).
 
 | Property | Type | Range | Description |
 |---|---|---|---|
 | `AZOM.FfbStrength` | int | 0–100 | Game FFB strength (%) |
-| `AZOM.Torque` | int | 50–100 | Base torque output limit (%) — the setting, not the rating; see `AZOM.TorqueLimit` |
+| `AZOM.Torque` | int | 50–100 | Base torque output limit (%): the setting, not the rating. See `AZOM.TorqueLimit` |
 | `AZOM.Rotation` | int | 60–2700 | Wheel rotation angle (degrees) |
 | `AZOM.WheelSpeedLimit` | int | 0–200 | Maximum wheel speed (%) |
 | `AZOM.Interpolation` | int | 0–10 | FFB interpolation |
@@ -77,7 +77,7 @@ or the setting doesn't exist on this firmware (equalizer bands 7–10 on 6-band 
 | `AZOM.Damper` | int | 0–100 | Wheel damper (%) |
 | `AZOM.Friction` | int | 0–100 | Wheel friction (%) |
 | `AZOM.Inertia` | int | 100–500 | Natural inertia (Wheelbase Effects) |
-| `AZOM.Spring` | int | 0–100 | Wheel spring — the base's own centering force (%) |
+| `AZOM.Spring` | int | 0–100 | Wheel spring: the base's own centering force (%) |
 | `AZOM.GameDamper` | int | 0–100 | Game damper effect gain (%) |
 | `AZOM.GameFriction` | int | 0–100 | Game friction effect gain (%) |
 | `AZOM.GameInertia` | int | 0–100 | Game inertia effect gain (%) |
@@ -102,7 +102,7 @@ The equalizer bands are numbered by hardware register, which is **not** frequenc
 10/30/50/80 Hz for bands 7–10.
 
 > **Properties are read-only.** A dashboard formula can *display* `AZOM.Spring`, but it
-> can't set it — SimHub gives plugins no way to accept a value from a formula. Changing a
+> can't set it. SimHub gives plugins no way to accept a value from a formula. Changing a
 > setting always goes through an action, which means a button press.
 
 ## Actions
@@ -127,7 +127,7 @@ Each *step* setting registers four actions: `…Up` / `…Down` apply a fine ste
 | `AZOM.DamperUp` / `…Down` / `…UpCoarse` / `…DownCoarse` | 0–100% | ±5 | ±10 | Wheel damper |
 | `AZOM.FrictionUp` / `…Down` / `…UpCoarse` / `…DownCoarse` | 0–100% | ±5 | ±10 | Wheel friction |
 | `AZOM.InertiaUp` / `…Down` / `…UpCoarse` / `…DownCoarse` | 100–500 | ±10 | ±50 | Natural inertia (Wheelbase Effects) |
-| `AZOM.SpringUp` / `…Down` / `…UpCoarse` / `…DownCoarse` | 0–100% | ±5 | ±10 | Wheel spring — the base's own centering force |
+| `AZOM.SpringUp` / `…Down` / `…UpCoarse` / `…DownCoarse` | 0–100% | ±5 | ±10 | Wheel spring: the base's own centering force |
 | `AZOM.GameDamperUp` / `…Down` / `…UpCoarse` / `…DownCoarse` | 0–100% | ±5 | ±10 | Game damper effect gain |
 | `AZOM.GameFrictionUp` / `…Down` / `…UpCoarse` / `…DownCoarse` | 0–100% | ±5 | ±10 | Game friction effect gain |
 | `AZOM.GameInertiaUp` / `…Down` / `…UpCoarse` / `…DownCoarse` | 0–100% | ±5 | ±10 | Game inertia effect gain |
@@ -139,7 +139,7 @@ Each *step* setting registers four actions: `…Up` / `…Down` apply a fine ste
 | `AZOM.RoadSensitivityUp` / `…Down` / `…UpCoarse` / `…DownCoarse` | 0–10 | ±1 | ±2 | Road sensitivity preset (also rewrites the FFB equalizer curve, exactly like the Base-tab preset buttons) |
 | `AZOM.Equalizer1Up` … `AZOM.Equalizer10…DownCoarse` | 0–400/500% | ±5 | ±25 | FFB equalizer bands, in register order (see the property table) |
 | `AZOM.FfbCurveX1Up` … `AZOM.FfbCurveY5…DownCoarse` | 0–100 | ±5 | ±10 | FFB output curve node positions |
-| `AZOM.ClutchSplitUp` / `…Down` / `…UpCoarse` / `…DownCoarse` | 0–100% | ±5 | ±10 | Clutch split point — the combined-paddle bite point (Paddles Mode = Combined) |
+| `AZOM.ClutchSplitUp` / `…Down` / `…UpCoarse` / `…DownCoarse` | 0–100% | ±5 | ±10 | Clutch split point: the combined-paddle bite point (Paddles Mode = Combined) |
 | `AZOM.Ab9EngineIntensityUp` / `…Down` / `…UpCoarse` / `…DownCoarse` | 0–100 | ±5 | ±10 | AB9 engine-vibration intensity |
 | `AZOM.Ab9EngineFrequencyUp` / `…Down` / `…UpCoarse` / `…DownCoarse` | 0–200 Hz | ±10 | ±20 | AB9 engine-vibration frequency |
 | `AZOM.Ab9GearShiftIntensityUp` / `…Down` / `…UpCoarse` / `…DownCoarse` | 0–100 | ±5 | ±10 | AB9 gear-shift vibration intensity |
@@ -152,7 +152,7 @@ Each *step* setting registers four actions: `…Up` / `…Down` apply a fine ste
 
 ### Toggle actions
 
-Each wheelbase *toggle* has three actions — `…On`, `…Off` and `…Toggle`:
+Each wheelbase *toggle* has three actions (`…On`, `…Off` and `…Toggle`):
 
 | Action | Effect |
 |---|---|
@@ -185,7 +185,7 @@ of a per-game profile, so they don't change when you switch games.
 | `AZOM.DisplayToggle` | Toggle the wheel screen on/off (remembers the on-brightness so toggling back on restores it) |
 | `AZOM.TestModeToggle` | Toggle telemetry test mode (synthetic signal sweep) for the active wheel page |
 | `AZOM.ClearLeds` | Blank all wheel and dash LEDs |
-| `AZOM.CalibrateCenter` | Re-center the wheelbase (same as the Calibrate Center button — hold the wheel at physical center when triggering) |
+| `AZOM.CalibrateCenter` | Re-center the wheelbase (same as the Calibrate Center button; hold the wheel at physical center when triggering) |
 
 ### Diagnostic actions
 
@@ -195,5 +195,5 @@ of a per-game profile, so they don't change when you switch games.
 | `AZOM.Fsr1ProbeNext` / `…Prev` | Step the probed payload offset up or down |
 
 These exist to walk an FSR V1 dashboard's payload boundaries by hand while watching the
-screen — the same thing the ◀ / ▶ buttons on the Dashboard Telemetry card do. There is no
+screen. The ◀ / ▶ buttons on the Dashboard Telemetry card do the same thing. There is no
 reason to bind them unless you're helping debug that wheel.

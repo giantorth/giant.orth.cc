@@ -1,7 +1,7 @@
 ---
 layout: guide.njk
 title: Pedals & Handbrake
-description: Set range, direction and output curves for your pedals and handbrake, and calibrate them in seconds.
+description: Set range, direction and output curves for your pedals and handbrake, and calibrate them.
 tags: guide
 order: 7
 ---
@@ -10,7 +10,7 @@ If you run MOZA pedals or a handbrake, AZOM gives each axis the same treatment a
 wheelbase: a live input read-out, direction and range, a calibration routine, and a
 draggable output curve. The tabs only appear for hardware that's actually connected.
 
-> **mBooster owners:** active-pedal feel and haptic effects have their own tab — see
+> **mBooster owners:** active-pedal feel and haptic effects have their own tab. See
 > [mBooster Pedal Feel &amp; Effects](/guides/mbooster/).
 
 ## Pedals
@@ -23,17 +23,17 @@ axis is moving before you touch anything.
 
 ### Direction &amp; range
 
-- **Reverse Direction** — flip the axis if it reads backwards.
-- **Range Start / Range End** — trim the usable travel. Set **Start** above 0% to add a
+- **Reverse Direction**: flip the axis if it reads backwards.
+- **Range Start / Range End**: trim the usable travel. Set **Start** above 0% to add a
   deadzone off rest; pull **End** below 100% so you reach full input before the pedal
   bottoms out.
-- **Sensor Ratio** — brake only, on pedals that have both sensors: blends the angle sensor
+- **Sensor Ratio** (brake only, on pedals that have both sensors): blends the angle sensor
   and the load cell. 0 is pure angle (travel), 100 is pure load cell (pressure). Load-cell
   braking is the usual race setup.
 
 ### Calibration
 
-Open the **Calibration** section and follow the prompt — press the pedal through its full
+Open the **Calibration** section and follow the prompt. Press the pedal through its full
 travel once and AZOM captures the physical end points. Do this any time the pedal feels
 like it isn't reaching 100%.
 
@@ -42,10 +42,10 @@ like it isn't reaching 100%.
 The right-hand graph maps physical position to in-game input. Drag the nodes, or use the
 presets:
 
-- **Linear** — 1:1, what you press is what the game gets.
-- **S Curve** — finer control around the middle of travel.
-- **Exponential** — gentle at first, aggressive near the end (a popular brake shape).
-- **Parabolic** — the opposite weighting, strong early bite.
+- **Linear**: 1:1, what you press is what the game gets.
+- **S Curve**: finer control around the middle of travel.
+- **Exponential**: gentle at first, aggressive near the end (a popular brake shape).
+- **Parabolic**: the opposite weighting, strong early bite.
 
 ## Handbrake
 
@@ -53,11 +53,11 @@ The **Handbrake** tab works the same way, with one extra choice.
 
 ![The AZOM Handbrake tab showing mode, range, calibration and output curve](/docs/images/Handbrake.png)
 
-- **Mode — Axis or Button.** *Axis* reports progressive pull (for rally and drift, where
-  partial lock matters). *Button* fires a simple on/off, which some titles prefer — the
+- **Mode: Axis or Button.** *Axis* reports progressive pull (for rally and drift, where
+  partial lock matters). *Button* fires a simple on/off, which some titles prefer. The
   **Button Threshold** slider sets how far you have to pull before it triggers.
 - **Reverse Direction**, **Range Start / End**, **Calibration** and the **Output Curve**
   behave exactly as they do for the pedals.
 
 > **Calibrate after mounting.** Pull the handbrake fully once through the calibration
-> routine after you bolt it to the rig — mounting tension changes the resting point.
+> routine after you bolt it to the rig. Mounting tension changes the resting point.
