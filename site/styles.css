@@ -150,7 +150,7 @@ code{font:500 .85em var(--mono);color:var(--y)}
 
 /* ---------- responsive ---------- */
 @media (max-width:960px){
-  .site-head a.l{display:none}
+  .site-head a.l:not(.m),.site-head .btn{display:none}
   .hero-row,.sec{grid-template-columns:1fr;gap:28px}
   .readout{grid-template-columns:1fr 1fr}
   .readout div:nth-child(3){border-left:0;padding-left:0}
