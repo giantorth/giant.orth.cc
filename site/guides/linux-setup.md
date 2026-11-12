@@ -80,21 +80,33 @@ General › Launch Options** and enter:
 Replace the path with wherever you cloned the repo. The `%command%` part matters: it
 tells Steam to run the game itself after the wrapper.
 
-## If the plugin can't see your wheelbase
+## If the plugin can't see your wheelbase, or inputs are missing
 
 First, make sure Boxflat isn't running, including as a background process
 (`pgrep -a boxflat` will tell you). It holds the serial port and blocks SimHub from
 connecting.
 
-The wheelbase shows up to Linux as a USB serial device (typically `/dev/ttyACM0`), and
-your user needs permission to open it. On most distributions that means being in the
-`dialout` group (`uucp` on Arch-based systems):
+Each MOZA device shows up to Linux twice: as a USB serial device (`/dev/ttyACM*`), which
+AZOM uses to connect, and as a raw HID device (`/dev/hidraw*`), which carries steering,
+pedal and button input. Your user needs read and write permission on both. If it's
+missing, AZOM shows a **Linux is blocking access to MOZA devices** banner naming the
+device nodes. Without serial access the plugin can't connect, and without HID access
+steering, pedal and button inputs stay blank while everything else works.
+
+Most distributions don't grant access to raw HID devices by default, and the `dialout`
+group only covers the serial side. Add a udev rule that covers both:
 
 ```bash
-sudo usermod -aG dialout $USER   # dialout on Debian/Ubuntu/Fedora, uucp on Arch
+sudo tee /etc/udev/rules.d/70-moza.rules <<'EOF'
+SUBSYSTEM=="tty", ATTRS{idVendor}=="346e", MODE="0660", TAG+="uaccess"
+SUBSYSTEM=="hidraw", ATTRS{idVendor}=="346e", MODE="0660", TAG+="uaccess"
+EOF
+sudo udevadm control --reload-rules
 ```
 
-Log out and back in for the group change to take effect, then restart SimHub.
+Then unplug and replug your MOZA devices (or power-cycle the wheelbase) and restart
+SimHub. The banner clears once access works, and the **Node access** line on the
+Diagnostics tab reads `rw` for every node.
 
 Still stuck? Serial handling under Wine varies by distribution and Wine version. The
 [Sim Racing on Linux Discord](https://discord.gg/kJY5yG9Fj5) is the best place to ask,
