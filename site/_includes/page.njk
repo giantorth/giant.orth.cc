@@ -1,0 +1,10 @@
+---
+layout: base.njk
+---
+<div class="wrap doc solo">
+  <article class="prose">
+    <h1>{{ title }}</h1>
+    {% if description %}<p class="lede">{{ description }}</p>{% endif %}
+    {{ content | safe }}
+  </article>
+</div>

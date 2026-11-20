@@ -56,6 +56,8 @@ issue.
 Nothing is written to disk until you submit or export; the capture lives in memory and is
 wiped each time SimHub restarts.
 
+See the [privacy policy](/privacy/) for where an uploaded report goes and how long it is kept.
+
 ## Full diagnostic report
 
 The **Full Diagnostic Report** section renders everything the plugin knows about your
