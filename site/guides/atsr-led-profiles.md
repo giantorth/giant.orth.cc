@@ -68,7 +68,7 @@ left navigation as its own device, where you can tune presets and per-element ef
 
 ## 5 · Export the LED profile
 
-Open your new ATSR device and, on the **Device Hub** tab, click **Export LED
+Open your new ATSR device and, in the **Device Hub** tab, under **Setup Your Device** section, click **Export LED
 Profile**. Save the exported LED profile somewhere you can find it. You will need it for the next step.
 
 ![The ATSR device Effect Customization tab with the Export LED Profile link](/docs/ATSR/Setup4.png)
