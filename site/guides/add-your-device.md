@@ -3,6 +3,7 @@ layout: guide.njk
 title: Add Your Device
 description: Register your MOZA wheel as a native SimHub device so LEDs, dashboards and effects light up.
 tags: guide
+category: setup
 order: 4
 ---
 

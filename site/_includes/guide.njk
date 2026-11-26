@@ -3,12 +3,14 @@ layout: base.njk
 ---
 <div class="wrap doc">
   <aside class="doc-side">
-    <h5>Guides</h5>
+    {%- for cat in guideCategories %}
+    <h5>{{ cat.title }}</h5>
     <ul>
-      {% for g in collections.guides %}
+      {%- for g in collections.guides %}{% if g.data.category == cat.slug %}
       <li><a class="{% if g.url == page.url %}active{% endif %}" href="{{ g.url }}">{{ g.data.title }}</a></li>
-      {% endfor %}
+      {%- endif %}{% endfor %}
     </ul>
+    {%- endfor %}
   </aside>
   <article class="prose">
     <h1>{{ title }}</h1>

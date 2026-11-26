@@ -3,7 +3,8 @@ layout: guide.njk
 title: Import a Profile
 description: Load a MOZA Pit House preset into AZOM and review exactly what changes before you apply it.
 tags: guide
-order: 13
+category: setup
+order: 5
 ---
 
 You don't have to build your force-feedback settings from scratch. AZOM can read MOZA Pit

@@ -3,7 +3,8 @@ layout: guide.njk
 title: Pedal Haptics
 description: Drive MOZA's S12 pedal vibration units from SimHub's ShakeIt editor, one device per pedal.
 tags: guide
-order: 9
+category: pedals
+order: 3
 ---
 
 MOZA's S12 pedal vibration units aren't set up in the AZOM panel. Each pedal shows up as

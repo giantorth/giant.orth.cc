@@ -3,6 +3,7 @@ layout: guide.njk
 title: Getting Started
 description: Install AZOM and connect your MOZA hardware to SimHub in a few minutes, then move on to the detailed guides.
 tags: guide
+category: setup
 order: 1
 ---
 

@@ -3,7 +3,8 @@ layout: guide.njk
 title: Pedals & Handbrake
 description: Set range, direction and output curves for your pedals and handbrake, and calibrate them.
 tags: guide
-order: 7
+category: pedals
+order: 1
 ---
 
 If you run MOZA pedals or a handbrake, AZOM gives each axis the same treatment as the

@@ -1,0 +1,10 @@
+[
+  { "slug": "setup", "title": "Setup" },
+  { "slug": "wheelbase", "title": "Wheelbase" },
+  { "slug": "pedals", "title": "Pedals" },
+  { "slug": "shifters-and-stalks", "title": "Shifters & Stalks" },
+  { "slug": "leds", "title": "LEDs" },
+  { "slug": "dashboard", "title": "Dashboard" },
+  { "slug": "controls", "title": "Controls" },
+  { "slug": "plugin", "title": "Plugin" }
+]

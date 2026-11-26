@@ -3,7 +3,8 @@ layout: guide.njk
 title: mBooster Pedal Feel & Effects
 description: Shape your mBooster's pedal feel in millimetres and kilograms, then layer telemetry-driven haptics such as ABS, traction control, wheel spin and more.
 tags: guide
-order: 8
+category: pedals
+order: 2
 ---
 
 mBooster active pedals get their own tab, and it does two jobs: hardware feel calibration

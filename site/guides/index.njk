@@ -9,12 +9,19 @@ permalink: /guides/
     <h1 class="doc-title">Guides</h1>
     <p>Setup, hardware notes and reference for running AZOM on your rig.</p>
   </div>
-  <div class="guide-list">
-    {% for g in collections.guides %}
-    <a class="guide-row" href="{{ g.url }}">
-      <h3>{{ g.data.title }}</h3>
-      <p>{{ g.data.description }}</p>
-    </a>
-    {% endfor %}
+  <div class="guide-cats">
+    {%- for cat in guideCategories %}
+    <section class="guide-cat" id="{{ cat.slug }}">
+      <h2>{{ cat.title }}</h2>
+      <div class="guide-list">
+        {%- for g in collections.guides %}{% if g.data.category == cat.slug %}
+        <a class="guide-row" href="{{ g.url }}">
+          <h3>{{ g.data.title }}</h3>
+          <p>{{ g.data.description }}</p>
+        </a>
+        {%- endif %}{% endfor %}
+      </div>
+    </section>
+    {%- endfor %}
   </div>
 </div>

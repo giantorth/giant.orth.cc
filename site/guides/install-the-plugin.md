@@ -3,6 +3,7 @@ layout: guide.njk
 title: Install the Plugin
 description: Drop the AZOM DLL into SimHub and enable it. A visual walkthrough from folder to first launch.
 tags: guide
+category: setup
 order: 2
 ---
 

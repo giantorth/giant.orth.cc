@@ -3,7 +3,8 @@ layout: guide.njk
 title: HGP & SGP Shifters
 description: Configure MOZA's passive H-pattern and sequential shifters (direction, paddle sync, LED colours, and the HGP's calibration routine).
 tags: guide
-order: 11
+category: shifters-and-stalks
+order: 2
 ---
 
 The HGP (H-pattern) and SGP (sequential) are MOZA's *passive* shifters: no motors, no

@@ -99,7 +99,10 @@ code{font:500 .85em var(--mono);color:var(--y)}
 .doc-hero{padding:64px 0 36px}
 .doc-title{font:800 clamp(48px,7vw,96px)/.9 var(--cond);text-transform:uppercase;margin:0}
 .doc-hero p{font-size:21px;color:var(--ink-2);max-width:56ch;margin:20px 0 0}
-.guide-list{display:grid;grid-template-columns:1fr 1fr;column-gap:56px;border-top:2px solid var(--ink);margin-bottom:110px}
+.guide-cats{margin-bottom:110px}
+.guide-cat + .guide-cat{margin-top:48px}
+.guide-cat h2{font:500 13px var(--mono);text-transform:uppercase;letter-spacing:.06em;color:var(--sub);margin:0 0 10px}
+.guide-list{display:grid;grid-template-columns:1fr 1fr;column-gap:56px;border-top:2px solid var(--ink)}
 .guide-row{display:block;padding:18px 0 20px;border-bottom:1px solid var(--line);text-decoration:none}
 .guide-row h3{font:700 24px/1.1 var(--cond);text-transform:uppercase;letter-spacing:.01em;margin:0 0 6px}
 .guide-row p{margin:0;color:var(--ink-2);font-size:15.5px}
@@ -111,6 +114,7 @@ code{font:500 .85em var(--mono);color:var(--y)}
 .doc-side{position:sticky;top:24px;max-height:calc(100vh - 48px);overflow-y:auto}
 .doc-side h5{font:500 12px var(--mono);text-transform:uppercase;letter-spacing:.06em;color:var(--sub);margin:0 0 10px}
 .doc-side ul{list-style:none;margin:0;padding:0;border-top:2px solid var(--ink)}
+.doc-side ul + h5{margin-top:24px}
 .doc-side a{display:block;padding:8px 0 8px 12px;border-bottom:1px solid var(--line);border-left:3px solid transparent;color:var(--ink-2);text-decoration:none;font-size:15px;line-height:1.35}
 .doc-side a:hover{color:var(--ink)}
 .doc-side a.active{color:var(--ink);font-weight:600;border-left-color:var(--g)}

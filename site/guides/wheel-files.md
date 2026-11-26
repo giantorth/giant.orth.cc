@@ -3,7 +3,8 @@ layout: guide.njk
 title: Wheel Files & Dashboard Upload
 description: Manage the dashboards stored on your wheel, upload new .mzdash layouts, and convert a SimHub dashboard into one.
 tags: guide
-order: 17
+category: dashboard
+order: 2
 ---
 
 [Dashboard &amp; Channels](/guides/dashboard-and-channels/) covers streaming telemetry into

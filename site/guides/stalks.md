@@ -3,7 +3,8 @@ layout: guide.njk
 title: Multi-Function Stalks
 description: Run MOZA's stalks as a plain button box, or let AZOM drive wipers, lights and indicators in ETS2 and ATS with true stage sync.
 tags: guide
-order: 12
+category: shifters-and-stalks
+order: 3
 ---
 
 MOZA's multi-function stalks work in two modes in AZOM. As a **button box** they're

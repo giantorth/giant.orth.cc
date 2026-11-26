@@ -3,7 +3,8 @@ layout: guide.njk
 title: Properties & Actions Reference
 description: Every AZOM.* SimHub property and bindable action, with types, ranges and step sizes.
 tags: guide
-order: 20
+category: controls
+order: 3
 ---
 
 The complete reference for what AZOM publishes to SimHub. **Properties** are read-only

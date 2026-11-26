@@ -3,7 +3,8 @@ layout: guide.njk
 title: Plugin Options
 description: Plugin-wide switches for profiles on launch, LFE ownership, Forza compatibility, language, updates, the SDK server and device definitions.
 tags: guide
-order: 22
+category: plugin
+order: 2
 ---
 
 Unlike the hardware tabs, what lives on the **Options** tab is plugin-wide rather than per

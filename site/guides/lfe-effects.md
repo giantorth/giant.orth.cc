@@ -3,7 +3,8 @@ layout: guide.njk
 title: LFE Effects
 description: Host-rendered low-frequency haptics for your wheelbase (engine rumble, ABS pulses and gearshift thumps), tunable with live SimHub formulas.
 tags: guide
-order: 6
+category: wheelbase
+order: 2
 ---
 
 LFE turns your wheelbase into a bass shaker: three low-frequency vibration channels,

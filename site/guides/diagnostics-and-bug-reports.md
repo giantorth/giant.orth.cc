@@ -3,7 +3,8 @@ layout: guide.njk
 title: Diagnostics & Bug Reports
 description: Use the Help tab to file a bug report with a redacted diagnostic bundle attached, or read the full diagnostic report yourself.
 tags: guide
-order: 23
+category: plugin
+order: 3
 ---
 
 The **Help** tab in the AZOM panel carries the version, the project links, the bug-report

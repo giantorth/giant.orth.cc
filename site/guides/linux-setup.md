@@ -3,6 +3,7 @@ layout: guide.njk
 title: Linux Setup
 description: Get SimHub running on Linux with linux-simracing-utils, drop in AZOM, and know where to find help when Wine gets weird.
 tags: guide
+category: setup
 order: 3
 ---
 

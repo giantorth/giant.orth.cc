@@ -3,7 +3,8 @@ layout: guide.njk
 title: Wheel LEDs & Knobs
 description: Drive your wheel's RPM lights and knob rings through SimHub, and set their onboard idle effects.
 tags: guide
-order: 14
+category: leds
+order: 1
 ---
 
 Once your wheel is added as a device, its LEDs become part of SimHub's effects

@@ -17,11 +17,21 @@ module.exports = function (eleventyConfig) {
   // Downloadable ATSR wheel profiles linked from the ATSR LED guide.
   eleventyConfig.addPassthroughCopy("docs/ATSR/*.atsrdevice");
 
-  // Guides collection, ordered by front-matter `order`.
-  eleventyConfig.addCollection("guides", (collectionApi) =>
-    collectionApi
+  // Guides collection, grouped in site/_data/guideCategories.json order, then by
+  // front-matter `order` within a category. Every guide must name a category.
+  eleventyConfig.addCollection("guides", (collectionApi) => {
+    const rank = (g) => {
+      const i = g.data.guideCategories.findIndex((c) => c.slug === g.data.category);
+      if (i < 0) throw new Error(`${g.inputPath}: unknown guide category "${g.data.category}"`);
+      return i;
+    };
+    return collectionApi
       .getFilteredByTag("guide")
-      .sort((a, b) => (a.data.order || 0) - (b.data.order || 0))
+      .sort((a, b) => rank(a) - rank(b) || (a.data.order || 0) - (b.data.order || 0));
+  });
+
+  eleventyConfig.addFilter("guideCategory", (slug, categories) =>
+    categories.find((c) => c.slug === slug)
   );
 
   return {

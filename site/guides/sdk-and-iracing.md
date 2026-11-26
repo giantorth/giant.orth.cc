@@ -3,7 +3,8 @@ layout: guide.njk
 title: SDK & iRacing
 description: Enable the MOZA SDK server for iRacing and 360 Hz mode from the plugin's Options tab.
 tags: guide
-order: 21
+category: plugin
+order: 1
 ---
 
 Some titles (**iRacing** in particular) and any game running MOZA's **360 Hz** mode need

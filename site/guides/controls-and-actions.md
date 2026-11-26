@@ -3,7 +3,8 @@ layout: guide.njk
 title: Controls & Actions
 description: Bind wheel buttons to AZOM actions for every wheelbase setting, clutch bite point, brightness, dashboard switching and more.
 tags: guide
-order: 18
+category: controls
+order: 1
 ---
 
 AZOM exposes 200+ bindable actions. **Every setting on the Base tab** can be nudged from a
