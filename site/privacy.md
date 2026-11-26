@@ -5,7 +5,7 @@ description: What AZOM sends off your PC, where it goes, and how long it is kept
 permalink: /privacy/
 ---
 
-*Last updated: 20 November 2026*
+*Last updated: 25 November 2026*
 
 AZOM is an open-source SimHub plugin maintained by one developer. It has no accounts, no
 analytics and no advertising, and it does not sell or share your data. The only personal
@@ -22,7 +22,9 @@ capture used for diagnostics lives in memory only and is wiped each time SimHub 
 - **GitHub**, to check for updates and download them. Each check sends the plugin version
   in the request header; GitHub sees your IP address. Turn it off with the update
   notifier setting on the **Options** tab.
-- **giant.orth.cc**, to fetch the guide list shown on the **Help** tab.
+- **giant.orth.cc**, to fetch the guide list shown on the **Help** tab. Each fetch sends
+  the plugin version in the URL and request header; GitHub and Cloudflare, which host the
+  site, see your IP address.
 - **The bug-report server**, only when you click **Submit bug report**.
 
 Buttons that open GitHub, Discord, Ko-fi or this site open them in your browser. Those
