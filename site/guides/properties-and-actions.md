@@ -57,6 +57,28 @@ Populated directly from the device, so they update even when no game is running.
 > read true while a wheel silently ignores the binding. Treat it as a health indicator,
 > not a guarantee.
 
+### Clutch bite point
+
+The automatic bite point calibration, for the current game and car. These are what the
+MOZA Clutch Bite Point overlays show. See
+[Clutch Bite Point &amp; Engine Vibration](/guides/clutch-bite-point/).
+
+| Property | Type | Description |
+|---|---|---|
+| `AZOM.ClutchBitePoint` | int | Bite point in use (0–100); -1 when uncalibrated |
+| `AZOM.ClutchBitePointCalibration` | string | Calibration state: `NotReady`, `Waiting`, `Armed` (ready to measure), `Releasing`, then `Captured` or `TooFast` for 5 s after a launch |
+| `AZOM.ClutchBitePointScope` | string | `Car` or `Game`, depending on whose calibration is in use; empty when uncalibrated |
+| `AZOM.ClutchBitePointSamples` | int | Number of launches in the calibration in use |
+| `AZOM.ClutchBitePointClutch` | double | Clutch position the calibration reads (0–100); -1 when the clutch source has no value |
+| `AZOM.ClutchBitePointInGame` | bool | Standing-start condition: game running and not paused |
+| `AZOM.ClutchBitePointHasClutch` | bool | Standing-start condition: the clutch source reports a position |
+| `AZOM.ClutchBitePointInGear` | bool | Standing-start condition: in gear |
+| `AZOM.ClutchBitePointStopped` | bool | Standing-start condition: below 0.5 km/h for 1 s |
+| `AZOM.ClutchBitePointClutchIn` | bool | Standing-start condition: clutch pressed fully in |
+| `AZOM.ClutchBitePointLastSample` | int | Bite point measured on the last launch in this game and car; -1 when none |
+| `AZOM.ClutchBitePointLastRate` | int | Clutch release speed on the last launch, % of travel per second; -1 when none |
+| `AZOM.ClutchBitePointLastSkipped` | bool | The last launch was too fast to count |
+
 ### Wheelbase settings
 
 Every wheelbase setting on the plugin's [Base tab](/guides/configure-the-wheelbase/) is

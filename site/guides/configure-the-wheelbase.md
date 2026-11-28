@@ -102,3 +102,6 @@ Every setting on this tab has a matching bindable action, so you can nudge rotat
 strength, spring, damping (even individual equalizer bands) without alt-tabbing out of
 the sim. Each one is also readable as a property for your dashboard. See
 [Controls &amp; Actions](/guides/controls-and-actions/).
+
+To use a touchscreen instead, open the ready-made
+[Wheelbase Control dashboard](/guides/wheelbase-control-dashboard/) on a phone or tablet.
